@@ -107,7 +107,7 @@
       <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:#5F6368;margin:0 0 16px;">TU CREDENCIAL VIRTUAL</p>
       <div ref="{{ setWrapRef }}" style="position:relative;width:100%;max-width:440px;height:{{ previewHeight }};">
         <div style="position:absolute;top:0;left:0;width:1084px;height:1451px;transform:scale({{ previewScale }});transform-origin:top left;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(32,33,36,0.14);">
-          <img src="assets/credencial-template.png" alt="Plantilla de la credencial de SkillBot Camp" style="position:absolute;top:0;left:0;width:1084px;height:1451px;">
+          <img src="assets/credencial-template.webp" alt="Plantilla de la credencial de SkillBot Camp" style="position:absolute;top:0;left:0;width:1084px;height:1451px;">
 
           <sc-if value="{{ hasPhoto }}" hint-placeholder-val="{{ false }}">
             <div onPointerDown="{{ onFramePointerDown }}" onWheel="{{ onFrameWheel }}" style="position:absolute;left:292px;top:492px;width:489px;height:502px;border-radius:48px;overflow:hidden;background:transparent;cursor:{{ frameCursor }};touch-action:none;">
@@ -472,7 +472,7 @@ class Component extends DCLogic {
     ctx.fillStyle = '#FFFFFF';
     ctx.fillRect(0, 0, TPL.W, TPL.H);
 
-    const tpl = await this.loadImage('assets/credencial-template.png');
+    const tpl = await this.loadImage('assets/credencial-template.webp');
     ctx.drawImage(tpl, 0, 0, TPL.W, TPL.H);
 
     if (s.photo) {
