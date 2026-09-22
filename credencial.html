@@ -141,12 +141,12 @@
       <form onSubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;gap:22px;">
         <div style="display:flex;flex-direction:column;gap:9px;">
           <label for="ly-nombre" style="font-size:13.5px;font-weight:600;color:#202124;">Nombre</label>
-          <input id="ly-nombre" value="{{ nombre }}" onChange="{{ onNombre }}" maxLength="{{ maxChars }}" placeholder="Ej. José Alberto" style="border:1.5px solid #E8F0FE;border-radius:14px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:15px;font-weight:500;color:#202124;outline:none;background:#F8FAFD;transition:border-color .18s ease;" style-focus="border-color:#1A73E8;">
+          <input id="ly-nombre" autocomplete="off" value="{{ nombre }}" onChange="{{ onNombre }}" maxLength="{{ maxChars }}" placeholder="Ej. María Fernanda" style="border:1.5px solid #E8F0FE;border-radius:14px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:15px;font-weight:500;color:#202124;outline:none;background:#F8FAFD;transition:border-color .18s ease;" style-focus="border-color:#1A73E8;">
         </div>
 
         <div style="display:flex;flex-direction:column;gap:9px;">
           <label for="ly-apellido" style="font-size:13.5px;font-weight:600;color:#202124;">Apellido</label>
-          <input id="ly-apellido" value="{{ apellido }}" onChange="{{ onApellido }}" maxLength="{{ maxChars }}" placeholder="Ej. Hurtado Rivas" style="border:1.5px solid #E8F0FE;border-radius:14px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:15px;font-weight:500;color:#202124;outline:none;background:#F8FAFD;transition:border-color .18s ease;" style-focus="border-color:#1A73E8;">
+          <input id="ly-apellido" autocomplete="off" value="{{ apellido }}" onChange="{{ onApellido }}" maxLength="{{ maxChars }}" placeholder="Ej. Quispe Rojas" style="border:1.5px solid #E8F0FE;border-radius:14px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:15px;font-weight:500;color:#202124;outline:none;background:#F8FAFD;transition:border-color .18s ease;" style-focus="border-color:#1A73E8;">
         </div>
 
         <div style="display:flex;flex-direction:column;gap:9px;">
