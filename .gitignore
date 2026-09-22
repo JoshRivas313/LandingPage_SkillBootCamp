@@ -1,0 +1,14 @@
+node_modules/
+.vercel/
+.env
+.env.local
+.DS_Store
+.wall-local/
+
+# Artefactos no desplegables (ver .vercelignore): duplicados y bundles
+# autocontenidos que producción no usa. Excluidos del repo para no arrastrar
+# ~25 MB de peso muerto en el historial.
+uploads/
+.thumbnail
+SkillBot Camp.html
+SkillBot Camp standalone-src.html

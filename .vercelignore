@@ -1,0 +1,8 @@
+# Duplicados y material de trabajo: 15 MB que no se sirven en producción.
+uploads/
+.thumbnail
+
+# Bundle autocontenido de 10 MB: solo trae la landing y su enlace al muro
+# apuntaría a un 404. Producción usa index.html + assets/.
+SkillBot Camp.html
+SkillBot Camp standalone-src.html

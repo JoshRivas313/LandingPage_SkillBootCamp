@@ -1,0 +1,11 @@
+{
+  "name": "skillbot-camp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Landing y credencial de SkillBot Camp — DSC UTP x GDG Open Lima",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@vercel/blob": "^0.27.0"
+  }
+}

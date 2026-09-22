@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>SkillBot Camp — Certifícate en Google Cloud | DSC UTP x GDG Open Lima</title>
+<meta name="description" content="Programa gratuito y 100 % virtual de Developer Student Clubs UTP y GDG Open Lima para dar tus primeros pasos en Google Cloud y avanzar en el Learning Path de Cloud Digital Leader.">
+<meta name="theme-color" content="#1A73E8">
+<link rel="canonical" href="https://skillbot-camp.vercel.app/">
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SkillBot Camp">
+<meta property="og:locale" content="es_PE">
+<meta property="og:title" content="SkillBot Camp — Certifícate en Google Cloud | DSC UTP x GDG Open Lima">
+<meta property="og:description" content="Programa gratuito y 100 % virtual de Developer Student Clubs UTP y GDG Open Lima para dar tus primeros pasos en Google Cloud y avanzar en el Learning Path de Cloud Digital Leader.">
+<meta property="og:url" content="https://skillbot-camp.vercel.app/">
+<meta property="og:image" content="https://skillbot-camp.vercel.app/assets/og-cover.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SkillBot Camp — Developer Student Clubs UTP x GDG Open Lima">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SkillBot Camp — Certifícate en Google Cloud | DSC UTP x GDG Open Lima">
+<meta name="twitter:description" content="Programa gratuito y 100 % virtual de Developer Student Clubs UTP y GDG Open Lima para dar tus primeros pasos en Google Cloud y avanzar en el Learning Path de Cloud Digital Leader.">
+<meta name="twitter:image" content="https://skillbot-camp.vercel.app/assets/og-cover.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+
+<script>
+  // Sirve React/Babel desde este mismo dominio en vez de unpkg.com.
+  // El runtime (support.js) consulta este mapa antes de ir al CDN; ver cdnScriptFor().
+  // Definirlo también evita que support.js vuelva a descargar la propia página al arrancar.
+  window.__resources = {
+    "https://unpkg.com/react@18.3.1/umd/react.production.min.js": "/vendor/react-18.3.1.production.min.js",
+    "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js": "/vendor/react-dom-18.3.1.production.min.js"
+    // Babel no se mapea: el runtime solo lo pide para módulos JSX vía <x-import>,
+    // y esta página no usa ninguno. Sin entrada aquí, si algún día hiciera falta
+    // caería al CDN en vez de dar 404 contra un archivo que no existe.
+  };
+</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin:0; font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; }
+  *:focus-visible { outline:3px solid #1A73E8; outline-offset:2px; }
+  a { color:#1A73E8; }
+  a:hover { color:#0D47A1; }
+  @keyframes skbFloat { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+  @keyframes skbWalk {
+    0%, 14%   { left:12.5%; transform:translateX(-50%) translateY(0); }
+    18%       { left:16%;   transform:translateX(-50%) translateY(-5px); }
+    25%, 39%  { left:37.5%; transform:translateX(-50%) translateY(0); }
+    43%       { left:41%;   transform:translateX(-50%) translateY(-5px); }
+    50%, 64%  { left:62.5%; transform:translateX(-50%) translateY(0); }
+    68%       { left:66%;   transform:translateX(-50%) translateY(-5px); }
+    75%, 92%  { left:87.5%; transform:translateX(-50%) translateY(0); }
+    96%       { left:50%;   transform:translateX(-50%) translateY(-5px); opacity:0; }
+    97%       { left:12.5%; transform:translateX(-50%) translateY(0); opacity:0; }
+    100%      { left:12.5%; transform:translateX(-50%) translateY(0); opacity:1; }
+  }
+  @keyframes skbFloatSm { 0%,100%{ transform:translateY(0) rotate(0deg); } 50%{ transform:translateY(-6px) rotate(4deg); } }
+  @keyframes fadeUp { from{ opacity:0; transform:translateY(18px); } to{ opacity:1; transform:translateY(0); } }
+  @keyframes fadeIn { from{ opacity:0; } to{ opacity:1; } }
+  @keyframes flowPulse { 0%,100%{ color:#5F6368; transform:translateX(0); } 50%{ color:#1A73E8; transform:translateX(3px); } }
+  @keyframes btnPulse { 0% { box-shadow: 0 0 0 0 rgba(26,115,232, 0.4); } 70% { box-shadow: 0 0 0 14px rgba(26,115,232, 0); } 100% { box-shadow: 0 0 0 0 rgba(26,115,232, 0); } }
+  @keyframes floatOrb { 0%, 100% { transform: translateY(0) scale(1); opacity: 0.5; } 50% { transform: translateY(-30px) scale(1.1); opacity: 0.8; } }
+  .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; width: 0; height: 0; }
+  .text-gradient { background: linear-gradient(135deg, #1A73E8 0%, #0D47A1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+  /* Countdown: siempre 4 columnas. En flex con min-width los bloques envolvían
+     a 3+1 por debajo de ~400px y "SEG" quedaba huérfano en una segunda fila. */
+  .skb-countdown { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; max-width:340px; }
+  .skb-countdown > div { padding:9px 6px; text-align:center; }
+  .skb-cd-num { font-family:'Poppins',sans-serif; font-weight:800; font-size:20px; color:#1A73E8; margin:0; font-variant-numeric:tabular-nums; }
+  .skb-cd-lbl { font-size:10.5px; color:#5F6368; font-weight:600; margin:2px 0 0; }
+  @media (max-width:420px) {
+    .skb-countdown { gap:7px; max-width:none; }
+    .skb-countdown > div { padding:8px 3px; border-radius:10px; }
+    .skb-cd-num { font-size:19px; }
+    .skb-cd-lbl { font-size:9.5px; letter-spacing:-0.2px; }
+  }
+
+  /* El wordmark del header partía en dos líneas por debajo de ~400px. */
+  .skb-logo-text { white-space:nowrap; font-size:20px; letter-spacing:-0.3px; }
+  @media (max-width:420px) {
+    .skb-header-bar { padding-left:16px !important; padding-right:16px !important; gap:10px !important; }
+    .skb-logo-text { font-size:16px; letter-spacing:-0.4px; }
+  }
+
+  /* Logos de organizadores: DSC es un wordmark 5:1 (535x107) y GDG es cuadrado
+     (200x200). Igualar la altura hace que GDG se vea diminuto, así que se
+     equilibran por peso óptico. object-fit:contain evita cualquier deformación. */
+  .skb-orgs { display:flex; align-items:center; justify-content:center; gap:56px; flex-wrap:wrap; }
+  .skb-orgs img { width:auto; object-fit:contain; }
+  .skb-org-dsc { height:64px; }
+  .skb-org-gdg { height:104px; }
+  @media (max-width:860px) {
+    .skb-orgs { gap:26px; }
+    .skb-org-dsc { height:42px; }
+    .skb-org-gdg { height:70px; }
+  }
+
+  /* --- Seccion FORMATO -----------------------------------------------------
+     Tarjetas de datos compactas (peso visual bajo) para que la fecha confirmada
+     sea el unico elemento dominante del cierre. */
+  .skb-stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(132px,1fr)); gap:10px; margin-bottom:40px; }
+  .skb-stat { background:#F8FAFD; border-radius:14px; padding:13px 10px; text-align:center; }
+  .skb-stat-ico { font-size:19px; margin:0 0 3px; line-height:1; }
+  .skb-stat-txt { font-weight:700; font-size:13.5px; color:#202124; margin:0; line-height:1.3; }
+
+  /* Cierre: fecha ~58% / ritmo ~42% en desktop; apilado en movil, fecha primero. */
+  .skb-formato-cierre { display:grid; grid-template-columns:1.4fr 1fr; gap:18px; align-items:stretch; }
+  .skb-fecha { background:linear-gradient(150deg,#1A73E8,#0D47A1); border-radius:22px; padding:34px 32px; color:#FFFFFF;
+               box-shadow:0 10px 26px rgba(13,71,161,0.24); position:relative; overflow:hidden;
+               display:flex; flex-direction:column; justify-content:center; }
+  .skb-ritmo { background:#FFFFFF; border:1px solid #D7E3F7; border-radius:22px; padding:28px 24px; text-align:center;
+               display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; }
+  .skb-ritmo-label { font-size:11px; font-weight:700; letter-spacing:1px; color:#5F6368; margin:0 0 16px; }
+  .skb-ritmo-graf { display:flex; align-items:center; justify-content:center; gap:0; width:100%; max-width:210px; }
+  .skb-ritmo-nodo { width:44px; height:44px; flex-shrink:0; border-radius:50%; background:#FFFFFF; border:2.5px solid #1A73E8;
+                    color:#1A73E8; font-family:'Poppins',sans-serif; font-weight:800; font-size:15px;
+                    display:flex; align-items:center; justify-content:center; box-shadow:0 2px 8px rgba(32,33,36,0.06); }
+  .skb-ritmo-linea { flex:1; height:3px; border-radius:2px; background:linear-gradient(90deg,#1A73E8,#4FC3F7); }
+  /* Los dos nodos estan en los extremos de una pista de 210px, asi que
+     space-between deja cada etiqueta centrada bajo su nodo sin calculos. */
+  .skb-ritmo-dias { display:flex; justify-content:space-between; width:100%; max-width:210px; margin:9px 0 0; }
+  .skb-ritmo-dias span { font-size:10.5px; font-weight:800; letter-spacing:1px; color:#1A73E8; }
+  .skb-ritmo-txt { font-family:'Poppins',sans-serif; font-size:17px; font-weight:600; color:#5F6368; margin:14px 0 0; line-height:1.3; }
+  .skb-ritmo-txt strong { font-weight:800; color:#202124; }
+  .skb-ritmo-hora { display:inline-block; background:#E8F0FE; color:#0D47A1; font-size:13.5px; font-weight:700;
+                    border-radius:14px; padding:6px 15px; margin:10px 0 0; letter-spacing:.2px; }
+  /* --- Cronograma ----------------------------------------------------------
+     7 elementos en 3 columnas dejaban una tarjeta huerfana. La InfoSession
+     ocupa la fila entera y las 6 sesiones caen en un 3x2 exacto. */
+  .skb-sesiones-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+  .skb-ses-destacada { grid-column:1 / -1; }
+
+  .skb-ses { position:relative; background:#FFFFFF; border:1px solid #E8F0FE; border-radius:16px;
+             padding:18px 18px 18px 22px; overflow:hidden;
+             transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .skb-ses::before { content:''; position:absolute; left:0; top:0; bottom:0; width:5px; background:var(--acc); }
+  .skb-ses:hover { transform:translateY(-5px); box-shadow:0 14px 30px rgba(32,33,36,0.10); border-color:var(--acc); }
+  .skb-ses-top { display:flex; align-items:center; gap:9px; margin-bottom:11px; }
+  .skb-ses-num { width:25px; height:25px; flex-shrink:0; border-radius:50%; background:var(--acc); color:var(--on,#FFFFFF);
+                 font-family:'Poppins',sans-serif; font-weight:800; font-size:12.5px;
+                 display:flex; align-items:center; justify-content:center; }
+  .skb-ses-tag { font-size:10.5px; font-weight:700; letter-spacing:.9px; color:#5F6368; }
+  .skb-ses-fecha { font-family:'Poppins',sans-serif; font-weight:800; font-size:30px; line-height:1; color:#202124; margin:0 0 7px; }
+  .skb-ses-fecha span { font-size:13.5px; font-weight:700; color:var(--acc); margin-left:3px; }
+  .skb-ses-meta { font-size:13.5px; font-weight:600; color:#5F6368; margin:0; }
+
+  /* InfoSession: banda ancha en azul claro. No repite el degradado de la
+     tarjeta de fecha de arriba, pero deja claro cual es la puerta de entrada. */
+  .skb-ses-destacada { position:relative; background:#E8F0FE; border:1px solid #B3D1F7; border-radius:16px;
+                       padding:18px 22px 18px 26px; overflow:hidden; display:flex; align-items:center;
+                       justify-content:space-between; gap:14px; flex-wrap:wrap;
+                       transition:transform .25s ease, box-shadow .25s ease; }
+  .skb-ses-destacada::before { content:''; position:absolute; left:0; top:0; bottom:0; width:5px; background:#1A73E8; }
+  .skb-ses-destacada:hover { transform:translateY(-4px); box-shadow:0 14px 30px rgba(26,115,232,0.16); }
+  .skb-ses-dtag { display:inline-block; background:#1A73E8; color:#FFFFFF; font-size:10px; font-weight:800; letter-spacing:1px;
+                  border-radius:12px; padding:4px 11px; margin:0 0 9px; }
+  .skb-ses-dfecha { font-family:'Poppins',sans-serif; font-weight:800; font-size:clamp(22px,2.6vw,28px); line-height:1;
+                    color:#0D47A1; margin:0; }
+  .skb-ses-dsub { font-size:13px; font-weight:600; color:#1A73E8; margin:7px 0 0; }
+  .skb-ses-dhora { font-family:'Poppins',sans-serif; font-size:22px; font-weight:800; color:#0D47A1; margin:0; white-space:nowrap; text-align:right; }
+  .skb-ses-dhora span { display:block; font-family:'Inter',sans-serif; font-size:11px; font-weight:800; color:#1A73E8; letter-spacing:1px; margin-bottom:3px; }
+
+  @media (max-width:860px) {
+    .skb-sesiones-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+  }
+  @media (max-width:560px) {
+    .skb-sesiones-grid { grid-template-columns:1fr; gap:11px; }
+    .skb-ses-fecha { font-size:27px; }
+    /* Apilada, la hora deja de ser la columna derecha: alineada a la izquierda
+       para que "SÁBADO" y "11:00 a. m." compartan el mismo margen que el resto. */
+    .skb-ses-destacada { gap:4px; }
+    .skb-ses-dhora { text-align:left; margin-top:4px; }
+  }
+  @media (max-width:980px) {
+    /* 3x2 en tablet: con auto-fit caian 5+1 y "Aforo ilimitado" quedaba solo. */
+    .skb-stats { grid-template-columns:repeat(3,1fr); }
+  }
+  @media (max-width:860px) {
+    .skb-formato-cierre { grid-template-columns:1fr; gap:14px; }
+    .skb-fecha { padding:28px 24px; }
+    /* Apilada, la tarjeta de ritmo se compacta para no superar en altura a la
+       de la fecha, que debe seguir siendo el elemento dominante. */
+    .skb-ritmo { padding:18px; gap:0; }
+    .skb-ritmo-label { margin-bottom:12px; }
+    .skb-ritmo-nodo { width:40px; height:40px; font-size:14px; }
+    .skb-ritmo-dias { margin-top:7px; }
+    .skb-ritmo-txt { font-size:16px; margin-top:10px; }
+    .skb-ritmo-hora { font-size:13px; padding:5px 13px; margin-top:8px; }
+  }
+  @media (max-width:560px) {
+    .skb-stats { grid-template-columns:repeat(2,1fr); }
+  }
+  @media (max-width:420px) {
+    .skb-stats { gap:8px; }
+    .skb-stat { padding:11px 6px; }
+    .skb-stat-txt { font-size:12.5px; }
+  }
+
+  /* CTA final: los dos botones se apilan solo cuando no caben en linea. */
+  .skb-cta-final-botones { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  @media (max-width:560px) {
+    .skb-cta-final-botones { width:100%; flex-direction:column; align-items:stretch; gap:10px; }
+  }
+
+  /* CTA flotante: pill en desktop, boton circular compacto en movil para que
+     tape lo minimo posible cuando si aparece. */
+  .skb-fab-txt { display:inline; }
+  @media (max-width:860px) {
+    /* Huella minima: 52px en la esquina. Un pill a 375px cruzaria media
+       pantalla; asi solo invade los ultimos ~36px de la columna de texto. */
+    .skb-fab { width:52px; height:52px; padding:0 !important; border-radius:50% !important; justify-content:center; }
+    .skb-fab-txt, .skb-fab-flecha { display:none !important; }
+    .skb-fab-wrap { right:14px !important; bottom:calc(14px + env(safe-area-inset-bottom, 0px)) !important; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+</style>
+</helmet>
+
+<div style="background:#FFFFFF;color:#202124;font-family:'Inter',sans-serif;overflow-x:clip;">
+
+<header style="position:sticky;top:0;z-index:100;background:#FFFFFF;padding:{{ headerStyle.padding }};box-shadow:{{ headerStyle.boxShadow }};transition:padding .25s ease, box-shadow .25s ease;">
+  <div class="skb-header-bar" style="max-width:1240px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
+    <a href="#hero" style="display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><circle cx="12" cy="12" r="11" fill="#1A73E8"></circle><path d="M8 13l2.5 2.5L16 9.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <span class="skb-logo-text" style="font-family:'Poppins',sans-serif;font-weight:800;color:#202124;">SKILLBOT <span style="color:#1A73E8;">CAMP</span></span>
+    </a>
+
+    <sc-if value="{{ !isMobile }}" hint-placeholder-val="{{ true }}">
+      <nav style="display:flex;align-items:center;gap:26px;" aria-label="Navegación principal">
+        <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="4">
+          <a href="{{ link.href }}" style="color:#202124;font-weight:500;font-size:15px;text-decoration:none;border-bottom:1.5px solid transparent;padding-bottom:2px;transition:color .18s ease, border-color .18s ease;" style-hover="color:#1A73E8;border-color:#1A73E8;">{{ link.label }}</a>
+        </sc-for>
+        <a href="https://chat.whatsapp.com/LFE86frAOI07pXXj4SBUGY" target="_blank" rel="noopener noreferrer" style="background:#1A73E8;color:#FFFFFF;padding:11px 22px;border-radius:24px;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 14px rgba(26,115,232,0.3);transition:transform .18s ease, box-shadow .18s ease;" style-hover="transform:translateY(-2px);box-shadow:0 8px 20px rgba(26,115,232,0.4);">Unirme al grupo</a>
+      </nav>
+    </sc-if>
+
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <a href="https://chat.whatsapp.com/LFE86frAOI07pXXj4SBUGY" target="_blank" rel="noopener noreferrer" style="background:#1A73E8;color:#FFFFFF;padding:9px 16px;border-radius:20px;font-weight:600;font-size:13px;text-decoration:none;white-space:nowrap;">Unirme</a>
+        <button onClick="{{ toggleMobileMenu }}" aria-label="Abrir menú" aria-expanded="{{ mobileOpen }}" style="background:none;border:none;width:36px;height:36px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;cursor:pointer;padding:0;">
+          <span style="display:block;width:22px;height:2.5px;background:#202124;border-radius:2px;transform:{{ hamburgerLine1Style.transform }};transition:{{ hamburgerLine1Style.transition }};"></span>
+          <span style="display:block;width:22px;height:2.5px;background:#202124;border-radius:2px;opacity:{{ hamburgerLine2Style.opacity }};transition:{{ hamburgerLine2Style.transition }};"></span>
+          <span style="display:block;width:22px;height:2.5px;background:#202124;border-radius:2px;transform:{{ hamburgerLine3Style.transform }};transition:{{ hamburgerLine3Style.transition }};"></span>
+        </button>
+      </div>
+    </sc-if>
+  </div>
+
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <nav style="max-height:{{ mobilePanelStyle.maxHeight }};opacity:{{ mobilePanelStyle.opacity }};overflow:{{ mobilePanelStyle.overflow }};transition:{{ mobilePanelStyle.transition }};display:flex;flex-direction:column;padding:0 24px;gap:2px;" aria-label="Navegación móvil">
+      <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="4">
+        <a href="{{ link.href }}" onClick="{{ closeMobileMenu }}" style="color:#202124;font-weight:500;font-size:16px;text-decoration:none;padding:12px 0;border-bottom:1px solid #E8F0FE;">{{ link.label }}</a>
+      </sc-for>
+    </nav>
+  </sc-if>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="hero" style="background:radial-gradient(circle at 1px 1px, rgba(26,115,232,0.10) 1px, transparent 0) 0 0/28px 28px, linear-gradient(180deg,#E8F0FE 0%,#FFFFFF 65%);padding:64px 24px 56px;position:relative;overflow:hidden;">
+  <!-- Background Orbs -->
+  <div style="position:absolute;top:10%;left:5%;width:300px;height:300px;background:radial-gradient(circle, rgba(26,115,232,0.15) 0%, transparent 70%);border-radius:50%;animation:floatOrb 8s ease-in-out infinite;pointer-events:none;"></div>
+  <div style="position:absolute;bottom:10%;right:5%;width:400px;height:400px;background:radial-gradient(circle, rgba(52,168,83,0.1) 0%, transparent 70%);border-radius:50%;animation:floatOrb 10s ease-in-out infinite reverse;pointer-events:none;"></div>
+  
+  <div style="position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;border:2px solid rgba(26,115,232,0.12);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:20px;left:-40px;width:120px;height:120px;border-radius:50%;border:2px solid rgba(234,67,53,0.10);pointer-events:none;"></div>
+  <div data-reveal-key="hero" style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:48px;align-items:center;position:relative;opacity:{{ revealHero.opacity }};transform:{{ revealHero.transform }};transition:{{ revealHero.transition }};">
+    <div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;animation:fadeUp .6s ease both;">
+        <span style="background:#34A853;color:#FFFFFF;font-weight:700;font-size:12px;letter-spacing:0.5px;padding:6px 14px;border-radius:20px;box-shadow:0 4px 10px rgba(52,168,83,0.2);">GRATUITO</span>
+        <span style="background:#FBBC04;color:#202124;font-weight:700;font-size:12px;letter-spacing:0.5px;padding:6px 14px;border-radius:20px;box-shadow:0 4px 10px rgba(251,188,4,0.2);">ABIERTO AL PÚBLICO</span>
+        
+      </div>
+      <h1 class="text-gradient" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(36px,5vw,56px);line-height:1.05;margin:0 0 6px;animation:fadeUp .6s ease .06s both;">SKILLBOT CAMP</h1>
+      <p style="font-family:'Poppins',sans-serif;font-weight:600;font-size:clamp(20px,2.6vw,26px);color:#1A73E8;margin:0 0 18px;animation:fadeUp .6s ease .12s both;">Cloud Digital Leader</p>
+        <p style="font-size:17px;line-height:1.6;color:#5F6368;margin:0 0 28px;max-width:480px;animation:fadeUp .6s ease .24s both;">Bootcamp gratuito, abierto al público general, para acompañarte mientras completas el Learning Path de Cloud Digital Leader en Google Skills</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:28px;animation:fadeUp .6s ease .3s both;">
+        <a href="https://chat.whatsapp.com/LFE86frAOI07pXXj4SBUGY" target="_blank" rel="noopener noreferrer" style="background:linear-gradient(135deg,#1A73E8,#0D47A1);color:#FFFFFF;padding:16px 32px;border-radius:28px;font-weight:700;font-size:16px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;animation:btnPulse 2s infinite;transition:transform .18s ease, box-shadow .18s ease;" style-hover="transform:translateY(-2px) scale(1.02);box-shadow:0 12px 26px rgba(26,115,232,0.42);">Unirme al grupo informativo<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></a>
+        
+      </div>
+
+      <div style="animation:fadeUp .6s ease .36s both;">
+        <p style="font-size:11.5px;color:#5F6368;font-weight:700;letter-spacing:0.4px;margin:0 0 8px;">LA INFOSESSION COMIENZA EN <span style="font-weight:600;letter-spacing:0;text-transform:none;">· hora Perú (UTC-5)</span></p>
+        <sc-if value="{{ !countdownEnded }}" hint-placeholder-val="{{ true }}">
+          <div class="skb-countdown">
+            <div style="background:#FFFFFF;border:1.5px solid #E8F0FE;border-radius:12px;">
+              <p class="skb-cd-num">{{ countdown.days }}</p>
+              <p class="skb-cd-lbl">DÍAS</p>
+            </div>
+            <div style="background:#FFFFFF;border:1.5px solid #E8F0FE;border-radius:12px;">
+              <p class="skb-cd-num">{{ countdown.hours }}</p>
+              <p class="skb-cd-lbl">HORAS</p>
+            </div>
+            <div style="background:#FFFFFF;border:1.5px solid #E8F0FE;border-radius:12px;">
+              <p class="skb-cd-num">{{ countdown.minutes }}</p>
+              <p class="skb-cd-lbl">MIN</p>
+            </div>
+            <div style="background:#FFFFFF;border:1.5px solid #E8F0FE;border-radius:12px;">
+              <p class="skb-cd-num">{{ countdown.seconds }}</p>
+              <p class="skb-cd-lbl">SEG</p>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ countdownEnded }}" hint-placeholder-val="{{ false }}">
+          <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:18px;color:#34A853;margin:0;">¡El evento ha comenzado!</p>
+        </sc-if>
+      </div>
+    </div>
+    <div style="position:relative;display:flex;justify-content:center;animation:fadeIn .8s ease .15s both;">
+      <div style="position:absolute;top:10%;right:2%;background:#FBBC04;color:#202124;font-size:12px;font-weight:700;padding:8px 14px;border-radius:16px;box-shadow:0 6px 16px rgba(0,0,0,0.12);animation:skbFloatSm 4s ease-in-out infinite;z-index:2;">Badge desbloqueado ✓</div>
+      <div style="position:absolute;bottom:6%;left:0;background:#FFFFFF;color:#1A73E8;font-size:12px;font-weight:700;padding:8px 14px;border-radius:16px;box-shadow:0 6px 16px rgba(0,0,0,0.12);animation:skbFloatSm 5s ease-in-out infinite reverse;z-index:2;">☁️ Learning Path</div>
+      <div style="background:radial-gradient(circle at 50% 40%, rgba(26,115,232,0.14), transparent 70%);border-radius:28px;padding:28px;animation:skbFloat 5s ease-in-out infinite;">
+        <img src="assets/skillbot-hero.png" alt="SkillBot, mascota oficial de SkillBot Camp, caminando y saludando con el pulgar arriba" style="width:100%;max-width:280px;height:auto;display:block;filter:drop-shadow(0 16px 26px rgba(26,115,232,0.22));">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANIZADORES -->
+
+
+<!-- PROPUESTA DE VALOR -->
+<section style="padding:48px 24px;background:#FFFFFF;">
+  
+<div style="max-width:1080px;margin:0 auto;text-align:center;">
+    <p style="font-size:13px;font-weight:700;letter-spacing:1px;color:#5F6368;margin:0 0 28px;">ORGANIZADO POR</p>
+    <div class="skb-orgs">
+      <img class="skb-org-dsc" src="assets/dsc-utp.png" alt="Developer Student Clubs, Universidad Tecnológica del Perú" width="535" height="107">
+      <img class="skb-org-gdg" src="assets/gdg-open-lima.png" alt="GDG Open Lima" width="200" height="200">
+    </div>
+  </div></section><section id="propuesta" style="padding:64px 24px;background:linear-gradient(180deg,#FFFFFF 0%,#F8FAFD 100%);">
+  <div data-reveal-key="propuesta" style="max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:52px;align-items:center;opacity:{{ revealPropuesta.opacity }};transform:{{ revealPropuesta.transform }};transition:{{ revealPropuesta.transition }};">
+    <div style="display:flex;justify-content:center;order:2;">
+      <a href="https://www.skills.google/paths/9" target="_blank" rel="noopener noreferrer" style="display:block;max-width:340px;width:100%;transition:transform .2s ease;" style-hover="transform:translateY(-4px);">
+        <img src="assets/cloud-digital-leader-badge.png" alt="Insignia Cloud Digital Leader, Google Cloud Certified" style="width:100%;height:auto;display:block;filter:drop-shadow(0 18px 30px rgba(26,115,232,0.18));">
+      </a>
+    </div>
+    <div style="order:1;">
+      <div style="width:40px;height:4px;border-radius:2px;background:#1A73E8;margin:0 0 16px;"></div>
+      <h2 class="text-gradient" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,34px);margin:0 0 16px;">ENTIENDE CLOUD MÁS ALLÁ DE LA TECNOLOGÍA</h2>
+      <div style="font-size:16.5px;color:#5F6368;line-height:1.7;margin:0 0 28px;">Con Cloud Digital Leader descubrirás cómo las organizaciones utilizan <strong data-start="239" data-end="281">Cloud, datos e inteligencia artificial</strong> para transformarse, modernizar su infraestructura y operar de forma segura<br>
+<p dir="auto" data-start="426" data-end="552"></p></div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+        <div style="display:flex;align-items:center;gap:10px;background:#FFFFFF;border:1px solid #E8F0FE;border-radius:14px;padding:10px 14px;">
+          <span style="font-size:18px;">☁️</span><span style="font-size:13.5px;font-weight:600;color:#202124;">Cloud</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;background:#FFFFFF;border:1px solid #E8F0FE;border-radius:14px;padding:10px 14px;">
+          <span style="font-size:18px;">📊</span><span style="font-size:13.5px;font-weight:600;color:#202124;">Datos</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;background:#FFFFFF;border:1px solid #E8F0FE;border-radius:14px;padding:10px 14px;">
+          <span style="font-size:18px;">🤖</span><span style="font-size:13.5px;font-weight:600;color:#202124;">IA</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;background:#FFFFFF;border:1px solid #E8F0FE;border-radius:14px;padding:10px 14px;">
+          <span style="font-size:18px;">🏗️</span><span style="font-size:13.5px;font-weight:600;color:#202124;">Infraestructura</span>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUIEN ES -->
+<section id="para-quien" style="padding:60px 24px;background:#E8F0FE;">
+  <div data-reveal-key="paraquien" style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:center;opacity:{{ revealParaQuien.opacity }};transform:{{ revealParaQuien.transform }};transition:{{ revealParaQuien.transition }};">
+    <div>
+      <div style="width:40px;height:4px;border-radius:2px;background:#EA4335;margin:0 0 16px;"></div>
+      <h2 class="text-gradient" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,32px);margin:0 0 14px;">¿SKILLBOT CAMP ES PARA TI?</h2>
+      <div style="font-size:16px;color:#5F6368;line-height:1.7;margin:0 0 20px;"><p dir="auto" data-start="714" data-end="749" class="PDq2pG_selectionAnchorContainer"><span aria-hidden="true" class="PDq2pG_selectionAnchor"></span></p>
+<p dir="auto" data-start="751" data-end="953">SkillBot Camp está pensado para estudiantes y personas interesadas en tecnología que quieren <strong data-start="844" data-end="884">entender Cloud desde sus fundamentos</strong>. No necesitas experiencia previa en Google Cloud ni saber programar.</p></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:stretch;">
+        <span style="display:inline-flex;align-items:center;gap:7px;background:#FFFFFF;color:#1A73E8;font-weight:700;font-size:13px;line-height:1.2;padding:10px 16px;border-radius:16px;white-space:nowrap;">💻 Tech &amp; Desarrollo</span>
+        <span style="display:inline-flex;align-items:center;gap:7px;background:#FFFFFF;color:#1A73E8;font-weight:700;font-size:13px;line-height:1.2;padding:10px 16px;border-radius:16px;white-space:nowrap;">📊 Data &amp; IA</span>
+        <span style="display:inline-flex;align-items:center;gap:7px;background:#FFFFFF;color:#1A73E8;font-weight:700;font-size:13px;line-height:1.2;padding:10px 16px;border-radius:16px;white-space:nowrap;">🚀 Producto &amp; Negocio</span>
+        <span style="display:inline-flex;align-items:center;gap:7px;background:#FFFFFF;color:#1A73E8;font-weight:700;font-size:13px;line-height:1.2;padding:10px 16px;border-radius:16px;white-space:nowrap;">🎓 Estudiantes</span>
+      </div>
+    </div>
+    <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;background:#FFFFFF;border-radius:20px;padding:28px;">
+      <sc-for list="{{ requisitos }}" as="req" hint-placeholder-count="5">
+        <li style="display:flex;align-items:center;gap:12px;font-size:15px;color:#202124;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><circle cx="12" cy="12" r="11" fill="#34A853"></circle><path d="M7.5 12.5l3 3 6-6.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          {{ req }}
+        </li>
+      </sc-for>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ASI FUNCIONA -->
+<section id="como-funciona" ref="{{ setRouteRef }}" style="background:#FFFFFF;height:{{ routeSectionHeight }};position:relative;">
+  <div style="position:{{ routeStickyPosition }};top:0;height:{{ routeStickyHeight }};display:flex;flex-direction:column;justify-content:center;padding:56px 24px;box-sizing:border-box;overflow:hidden;">
+    <div style="max-width:1080px;margin:0 auto;width:100%;">
+      <div style="max-width:620px;margin:0 auto 8px;text-align:center;">
+        <div style="width:40px;height:4px;border-radius:2px;background:#1A73E8;margin:0 auto 16px;"></div>
+        <h2 class="text-gradient" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,38px);margin:0 0 12px;">Así funciona SkillBot Camp</h2>
+        <p style="font-size:15.5px;color:#5F6368;line-height:1.6;margin:0;">Tu experiencia comienza en la InfoSession. Este es el recorrido que seguirás.</p>
+      </div>
+
+      <sc-if value="{{ !isMobile }}" hint-placeholder-val="{{ true }}">
+        <div style="position:relative;padding:126px 0 8px;">
+          <img src="assets/skillbot-walk.png" alt="SkillBot recorriendo el camino del programa" style="position:absolute;left:{{ botLeft }};top:8px;width:104px;height:auto;transform:translate3d(-50%,0,0) scale({{ botScale }});transition:{{ botTransition }};pointer-events:none;z-index:3;filter:drop-shadow(0 10px 18px rgba(26,115,232,0.22));">
+          <div style="position:absolute;left:12.5%;right:12.5%;top:168px;height:3px;background:#E3ECFA;border-radius:2px;"></div>
+          <div style="position:absolute;left:12.5%;top:168px;width:{{ progressWidth }};height:3px;background:linear-gradient(90deg,#1A73E8,#4FC3F7);border-radius:2px;transition:{{ botTransition }};"></div>
+          <div style="position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+            <sc-for list="{{ flowSteps }}" as="fs" hint-placeholder-count="4">
+              <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+                <div style="height:26px;display:flex;align-items:center;">
+                  <sc-if value="{{ fs.highlight }}" hint-placeholder-val="{{ false }}">
+                    <span style="background:#E8F0FE;color:#0D47A1;font-size:10px;font-weight:700;letter-spacing:0.6px;padding:4px 10px;border-radius:10px;">PRIMER PASO</span>
+                  </sc-if>
+                </div>
+                <div style="width:48px;height:48px;border-radius:50%;background:{{ fs.nodeBg }};border:2px solid {{ fs.nodeBorder }};color:{{ fs.nodeIcon }};display:flex;align-items:center;justify-content:center;margin:10px 0 0;box-shadow:{{ fs.nodeShadow }};transition:background .3s ease, border-color .3s ease, box-shadow .3s ease;">
+                  <span style="display:flex;" dangerouslySetInnerHTML="{{ fs.iconHtml }}"></span>
+                </div>
+                <p style="font-family:'Poppins',sans-serif;font-weight:800;font-size:12px;letter-spacing:1px;color:{{ fs.numColor }};margin:14px 0 4px;transition:color .3s ease;">{{ fs.num }}</p>
+                <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:16.5px;margin:0 0 8px;color:{{ fs.titleColor }};transition:color .3s ease;">{{ fs.title }}</h3>
+                <p style="font-size:13.5px;color:#5F6368;line-height:1.6;margin:0;max-width:210px;">{{ fs.desc }}</p>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+        <div ref="{{ setMobileRouteRef }}" style="max-width:420px;margin:26px auto 0;position:relative;">
+          <div style="position:absolute;left:21px;top:{{ mRouteLineTop }};height:{{ mRouteLineHeight }};width:2px;background:#E3ECFA;border-radius:1px;"></div>
+          <div style="position:absolute;left:21px;top:{{ mRouteLineTop }};height:{{ mProgressHeight }};width:2px;background:linear-gradient(180deg,#1A73E8,#4FC3F7);border-radius:1px;transition:height 1s cubic-bezier(.4,0,.2,1);"></div>
+          <img src="assets/skillbot-walk.png" alt="SkillBot recorriendo el camino del programa" style="position:absolute;left:22px;top:{{ mBotTop }};width:62px;height:auto;opacity:{{ mBotOpacity }};transform:translate3d(-50%,-50%,0) scale({{ mBotScale }}) rotate({{ mBotRotate }});transition:top 1s cubic-bezier(.4,0,.2,1), opacity .35s ease, transform .5s ease;pointer-events:none;z-index:3;filter:drop-shadow(0 8px 14px rgba(26,115,232,0.24));">
+          <sc-for list="{{ mFlowSteps }}" as="fs" hint-placeholder-count="4">
+            <div style="display:flex;align-items:flex-start;gap:16px;position:relative;padding:0 0 22px 0;opacity:{{ fs.rowOpacity }};transition:opacity .4s ease;">
+              <div ref="{{ fs.nodeRef }}" style="width:42px;height:42px;border-radius:50%;background:{{ fs.nodeBg }};border:2px solid {{ fs.nodeBorder }};color:{{ fs.nodeIcon }};display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;box-shadow:{{ fs.nodeShadow }};transition:background .35s ease, border-color .35s ease, box-shadow .35s ease;">
+                <span style="display:flex;" dangerouslySetInnerHTML="{{ fs.iconHtml }}"></span>
+              </div>
+              <div style="padding-top:1px;flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:2px;">
+                  <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:11px;letter-spacing:1px;color:{{ fs.numColor }};transition:color .35s ease;">{{ fs.num }}</span>
+                  <sc-if value="{{ fs.highlight }}" hint-placeholder-val="{{ false }}">
+                    <span style="background:#E8F0FE;color:#0D47A1;font-size:9.5px;font-weight:700;letter-spacing:0.5px;padding:3px 8px;border-radius:9px;">PRIMER PASO</span>
+                  </sc-if>
+                </div>
+                <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15.5px;margin:0 0 4px;color:{{ fs.titleColor }};transition:color .35s ease;">{{ fs.title }}</h3>
+                <p style="font-size:13px;color:#5F6368;line-height:1.55;margin:0;">{{ fs.desc }}</p>
+              </div>
+            </div>
+          </sc-for>
+          <div style="height:22px;display:flex;align-items:center;padding-left:58px;">
+            <sc-if value="{{ mCelebrating }}" hint-placeholder-val="{{ false }}">
+              <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:12.5px;color:#1A73E8;">¡Ruta completada!</span>
+            </sc-if>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<!-- TU LEARNING PATH -->
+<section id="recorrido" style="padding:64px 24px;background:#FFFFFF;">
+  <div data-reveal-key="recorrido" style="max-width:1000px;margin:0 auto;opacity:{{ revealRecorrido.opacity }};transform:{{ revealRecorrido.transform }};transition:{{ revealRecorrido.transition }};">
+    <div style="max-width:640px;margin:0 auto 40px;text-align:center;">
+      <div style="width:40px;height:4px;border-radius:2px;background:#FBBC04;margin:0 auto 16px;"></div>
+      <h2 class="text-gradient" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,38px);margin:0 0 12px;">Tu ruta, paso a paso</h2>
+      <p style="font-size:16px;color:#5F6368;line-height:1.6;margin:0;">6 cursos. 6 insignias. 1 insignia del recorrido completo.</p>
+    </div>
+    <sc-if value="{{ !isMobile }}" hint-placeholder-val="{{ true }}">
+      <div style="max-width:760px;margin:0 auto 32px;position:relative;">
+        <div style="position:absolute;left:50%;top:8px;bottom:8px;width:3px;background:linear-gradient(180deg, #1A73E8, #34A853, #FBBC04, #EA4335, #0D47A1, #4FC3F7);transform:translateX(-50%);border-radius:2px;box-shadow:0 0 10px rgba(26,115,232,0.5);"></div>
+        <sc-for list="{{ steps }}" as="step" hint-placeholder-count="6">
+          <div style="display:grid;grid-template-columns:1fr 44px 1fr;align-items:center;gap:16px;position:relative;padding:10px 0;">
+            <sc-if value="{{ step.leftCard }}" hint-placeholder-val="{{ true }}">
+              <div style="background:#FFFFFF;border-radius:16px;padding:14px 18px;box-shadow:0 2px 10px rgba(32,33,36,0.06);border-top:3px solid {{ step.color }};text-align:right;transition:transform .18s ease, box-shadow .18s ease;" style-hover="transform:translateX(-4px);box-shadow:0 10px 20px rgba(32,33,36,0.1);">
+                <div style="display:flex;justify-content:flex-end;"><span style="background:#FBBC04;color:#202124;font-size:10px;font-weight:700;padding:3px 9px;border-radius:10px;margin-bottom:6px;">INSIGNIA</span></div>
+                <p style="font-size:14px;font-weight:600;color:#202124;margin:0 0 3px;">{{ step.label }}</p>
+                <p style="font-size:12px;color:#5F6368;line-height:1.5;margin:0;">{{ step.desc }}</p>
+              </div>
+            </sc-if>
+            <sc-if value="{{ !step.leftCard }}" hint-placeholder-val="{{ false }}"><div></div></sc-if>
+
+            <div style="width:48px;height:48px;border-radius:50%;background:#FFFFFF;border:2.5px solid {{ step.color }};color:{{ step.color }};font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;box-shadow:0 4px 10px rgba(32,33,36,0.1);">{{ step.num }}</div>
+
+            <sc-if value="{{ !step.leftCard }}" hint-placeholder-val="{{ false }}">
+              <div style="background:#FFFFFF;border-radius:16px;padding:14px 18px;box-shadow:0 2px 10px rgba(32,33,36,0.06);border-top:3px solid {{ step.color }};transition:transform .18s ease, box-shadow .18s ease;" style-hover="transform:translateX(4px);box-shadow:0 10px 20px rgba(32,33,36,0.1);">
+                <span style="background:#FBBC04;color:#202124;font-size:10px;font-weight:700;padding:3px 9px;border-radius:10px;display:inline-block;margin-bottom:6px;">INSIGNIA</span>
+                <p style="font-size:14px;font-weight:600;color:#202124;margin:0 0 3px;">{{ step.label }}</p>
+                <p style="font-size:12px;color:#5F6368;line-height:1.5;margin:0;">{{ step.desc }}</p>
+              </div>
+            </sc-if>
+            <sc-if value="{{ step.leftCard }}" hint-placeholder-val="{{ true }}"><div></div></sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width:420px;margin:0 auto 28px;position:relative;">
+        <div style="position:absolute;left:23px;top:8px;bottom:8px;width:3px;background:linear-gradient(180deg, #1A73E8, #34A853, #FBBC04, #EA4335, #0D47A1, #4FC3F7);border-radius:2px;box-shadow:0 0 10px rgba(26,115,232,0.5);"></div>
+        <sc-for list="{{ steps }}" as="step" hint-placeholder-count="6">
+          <div style="display:flex;align-items:flex-start;gap:14px;position:relative;padding-bottom:18px;">
+            <div style="width:46px;height:46px;border-radius:50%;background:#FFFFFF;border:2.5px solid {{ step.color }};color:{{ step.color }};font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;box-shadow:0 4px 10px rgba(32,33,36,0.1);">{{ step.num }}</div>
+            <div style="background:#FFFFFF;border-radius:16px;padding:14px 16px;flex:1;box-shadow:0 2px 10px rgba(32,33,36,0.06);border-top:3px solid {{ step.color }};">
+              <span style="background:#FBBC04;color:#202124;font-size:10px;font-weight:700;padding:3px 9px;border-radius:10px;display:inline-block;margin-bottom:6px;">INSIGNIA</span>
+              <p style="font-size:14px;font-weight:600;color:#202124;margin:0 0 3px;">{{ step.label }}</p>
+              <p style="font-size:12.5px;color:#5F6368;line-height:1.5;margin:0;">{{ step.desc }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+    <div style="display:flex;justify-content:center;">
+      <div style="background:linear-gradient(135deg,#1A73E8,#0D47A1);border-radius:24px;padding:32px 40px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:center;box-shadow:0 12px 30px rgba(13,71,161,0.3);max-width:640px;">
+        <img src="assets/skillbot-badge-unlocked.png" alt="SkillBot celebrando con una insignia desbloqueada" style="width:120px;height:auto;">
+        <div style="text-align:left;">
+          <p style="color:#FBBC04;font-weight:800;font-size:14px;letter-spacing:0.5px;margin:0 0 4px;">🏆 RECORRIDO COMPLETADO</p>
+          <p style="color:#FFFFFF;font-family:'Poppins',sans-serif;font-weight:800;font-size:26px;margin:0;">6/6 insignias</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATO -->
+<section id="formato" class="tech-pattern" style="padding:64px 24px;background-color:#E8F0FE;">
+  <div data-reveal-key="formato" style="max-width:1000px;margin:0 auto;opacity:{{ revealFormato.opacity }};transform:{{ revealFormato.transform }};transition:{{ revealFormato.transition }};">
+    <div style="max-width:640px;margin:0 auto 30px;text-align:center;">
+      <div style="width:40px;height:4px;border-radius:2px;background:#34A853;margin:0 auto 16px;"></div>
+      <h2 class="text-gradient" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,38px);margin:0 0 12px;">Así se ven las próximas semanas</h2>
+      <p style="font-size:16px;color:#5F6368;line-height:1.6;margin:0;">3 semanas, 6 sesiones con Katherine Chauca, por Microsoft Teams.</p>
+    </div>
+    <div class="skb-stats">
+      <div class="skb-stat">
+        <p class="skb-stat-ico">🗓️</p>
+        <p class="skb-stat-txt">6 sesiones</p>
+      </div>
+      <div class="skb-stat">
+        <p class="skb-stat-ico">🔁</p>
+        <p class="skb-stat-txt">2 por semana</p>
+      </div>
+
+      <div class="skb-stat">
+        <p class="skb-stat-ico">💻</p>
+        <p class="skb-stat-txt">Microsoft Teams</p>
+      </div>
+      <div class="skb-stat">
+        <p class="skb-stat-ico">🌐</p>
+        <p class="skb-stat-txt">100% virtual</p>
+      </div>
+      <div class="skb-stat">
+        <p class="skb-stat-ico">🎟️</p>
+        <p class="skb-stat-txt">Aforo ilimitado</p>
+      </div>
+    </div>
+    <div class="skb-formato-cierre">
+      <!-- Protagonista: la única fecha confirmada. -->
+      <div class="skb-fecha">
+        <div style="position:absolute;top:-30px;right:-30px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,0.08);"></div>
+        <p style="font-size:12.5px;font-weight:700;letter-spacing:0.6px;color:#FBBC04;margin:0 0 10px;position:relative;">PRÓXIMA FECHA CONFIRMADA</p>
+        <p style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(32px,4vw,46px);line-height:1.03;margin:0 0 10px;position:relative;">26 DE SEPTIEMBRE</p>
+        <p style="font-size:18px;font-weight:600;margin:0;position:relative;">11:00 a. m. <span style="font-weight:500;opacity:0.85;">(hora Perú)</span> · Taller informático</p>
+      </div>
+
+      <!-- Complemento gráfico del dato "2 por semana" de las tarjetas de arriba:
+           reutiliza el lenguaje de nodos numerados + línea de progreso que ya
+           usan "Así funciona" y "Tu ruta, paso a paso". -->
+      <div class="skb-ritmo">
+        <p class="skb-ritmo-label">RITMO DEL PROGRAMA</p>
+        <div class="skb-ritmo-graf" role="img" aria-label="Dos sesiones por semana: martes y jueves, de 6:30 a 8:00 p. m.">
+          <span class="skb-ritmo-nodo">1</span>
+          <span class="skb-ritmo-linea"></span>
+          <span class="skb-ritmo-nodo">2</span>
+        </div>
+        <div class="skb-ritmo-dias" aria-hidden="true"><span>MARTES</span><span>JUEVES</span></div>
+        <p class="skb-ritmo-txt"><strong>2 veces</strong> por semana</p>
+        <p class="skb-ritmo-hora">6:30 – 8:00 p. m.</p>
+      </div>
+    </div>
+      <!-- Cronograma: 7 fechas. La InfoSession abre la fila completa y las 6
+           sesiones caen en un 3x2 exacto, sin tarjeta huérfana. -->
+      <div style="margin-top:44px;padding-top:30px;border-top:1px solid #D7E3F7;">
+        <div style="width:40px;height:4px;border-radius:2px;background:#EA4335;margin:0 0 14px;"></div>
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(21px,2.7vw,27px);color:#202124;margin:0 0 6px;">Cronograma de sesiones</h3>
+        <p style="font-size:14.5px;color:#5F6368;margin:0 0 22px;">Todas las fechas confirmadas · hora de Perú (UTC-5)</p>
+        <div class="skb-sesiones-grid">
+          <div class="skb-ses-destacada">
+            <div style="min-width:0;">
+              <p class="skb-ses-dtag">INFO SESSION · EMPIEZA AQUÍ</p>
+              <p class="skb-ses-dfecha">26 DE SEPTIEMBRE</p>
+              <p class="skb-ses-dsub">Taller informático · abierto a todos</p>
+            </div>
+            <p class="skb-ses-dhora"><span>SÁBADO</span>11:00 a. m.</p>
+          </div>
+        <div class="skb-ses" style="--acc:#1A73E8;">
+          <div class="skb-ses-top">
+            <span class="skb-ses-num">1</span>
+            <span class="skb-ses-tag">SESIÓN 1</span>
+          </div>
+          <p class="skb-ses-fecha">29<span>SEP</span></p>
+          <p class="skb-ses-meta">Martes · 6:30 p. m.</p>
+        </div>
+        <div class="skb-ses" style="--acc:#EA4335;">
+          <div class="skb-ses-top">
+            <span class="skb-ses-num">2</span>
+            <span class="skb-ses-tag">SESIÓN 2</span>
+          </div>
+          <p class="skb-ses-fecha">01<span>OCT</span></p>
+          <p class="skb-ses-meta">Jueves · 6:30 p. m.</p>
+        </div>
+        <div class="skb-ses" style="--acc:#FBBC04;--on:#202124;">
+          <div class="skb-ses-top">
+            <span class="skb-ses-num">3</span>
+            <span class="skb-ses-tag">SESIÓN 3</span>
+          </div>
+          <p class="skb-ses-fecha">06<span>OCT</span></p>
+          <p class="skb-ses-meta">Martes · 6:30 p. m.</p>
+        </div>
+        <div class="skb-ses" style="--acc:#34A853;">
+          <div class="skb-ses-top">
+            <span class="skb-ses-num">4</span>
+            <span class="skb-ses-tag">SESIÓN 4</span>
+          </div>
+          <p class="skb-ses-fecha">08<span>OCT</span></p>
+          <p class="skb-ses-meta">Jueves · 6:30 p. m.</p>
+        </div>
+        <div class="skb-ses" style="--acc:#1A73E8;">
+          <div class="skb-ses-top">
+            <span class="skb-ses-num">5</span>
+            <span class="skb-ses-tag">SESIÓN 5</span>
+          </div>
+          <p class="skb-ses-fecha">14<span>OCT</span></p>
+          <p class="skb-ses-meta">Miércoles · 6:30 p. m.</p>
+        </div>
+        <div class="skb-ses" style="--acc:#EA4335;">
+          <div class="skb-ses-top">
+            <span class="skb-ses-num">6</span>
+            <span class="skb-ses-tag">SESIÓN 6</span>
+          </div>
+          <p class="skb-ses-fecha">16<span>OCT</span></p>
+          <p class="skb-ses-meta">Viernes · 6:30 p. m.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUCTORA -->
+<section id="instructora" style="padding:60px 24px;background:#FFFFFF;">
+  <div data-reveal-key="instructora" style="max-width:1000px;margin:0 auto;opacity:{{ revealInstructora.opacity }};transform:{{ revealInstructora.transform }};transition:{{ revealInstructora.transition }};">
+    <div style="text-align:center;">
+      <div style="width:40px;height:4px;border-radius:2px;background:#1A73E8;margin:0 auto 16px;"></div>
+      <h2 class="text-gradient" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,32px);margin:0 0 12px;">Quiénes te acompañan</h2>
+      <p style="font-size:15.5px;color:#5F6368;margin:0 0 36px;max-width:480px;margin-left:auto;margin-right:auto;">Conoce a quienes te acompañarán durante tu recorrido.</p>
+    </div>
+    <sc-if value="{{ !isMobile }}" hint-placeholder-val="{{ true }}">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;">
+        <sc-for list="{{ instructors }}" as="ins" hint-placeholder-count="2">
+          <div style="background:#FFFFFF;border-radius:26px;box-shadow:0 4px 18px rgba(32,33,36,0.07);border:1px solid #E8F0FE;overflow:hidden;transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;" style-hover="transform:translateY(-10px);box-shadow:0 30px 60px rgba(26,115,232,0.2);border-color:#1A73E8;">
+            <div style="position:relative;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(160deg,#1A73E8,#0D47A1);">
+              <img sc-camel-src="{{ ins.photo }}" alt="Foto de {{ ins.name }}" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease;" style-hover="transform:scale(1.06);">
+              <div style="position:absolute;left:0;right:0;bottom:0;padding:20px;background:linear-gradient(180deg,transparent,rgba(13,71,161,0.88));">
+                <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:21px;margin:0 0 2px;color:#FFFFFF;">{{ ins.name }}</h3>
+                <p style="font-size:13.5px;color:#E8F0FE;font-weight:500;margin:0;">{{ ins.role }}</p>
+              </div>
+            </div>
+            <div style="padding:24px 26px 28px;">
+              <div style="display:inline-flex;align-items:center;gap:8px;background:#E8F0FE;color:#0D47A1;font-size:12.5px;font-weight:700;padding:8px 14px;border-radius:14px;margin-bottom:16px;">🎤 {{ ins.topic }}</div>
+              <p style="font-size:14.5px;color:#5F6368;line-height:1.7;margin:0 0 20px;">{{ ins.desc }}</p>
+              <sc-if value="{{ ins.linkedin }}" hint-placeholder-val="{{ false }}">
+                <a href="{{ ins.linkedin }}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;background:#FFFFFF;color:#1A73E8;border:1.5px solid #1A73E8;padding:9px 16px;border-radius:22px;font-size:13px;font-weight:600;text-decoration:none;transition:background .18s ease, color .18s ease;" style-hover="background:#1A73E8;color:#FFFFFF;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"></path></svg>
+                  Ver perfil de LinkedIn
+                </a>
+              </sc-if>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <div role="tablist" aria-label="Selecciona un ponente" style="display:flex;gap:0;margin:0 0 20px;border-bottom:1.5px solid #E8F0FE;">
+        <sc-for list="{{ instructors }}" as="ins" hint-placeholder-count="2">
+          <button type="button" role="tab" aria-selected="{{ ins.tabSelected }}" onClick="{{ ins.onTab }}" style="flex:1;min-width:0;background:none;border:none;padding:12px 8px 0;cursor:pointer;font-family:'Inter',sans-serif;display:flex;flex-direction:column;align-items:center;gap:10px;">
+            <span style="font-size:14px;font-weight:700;color:{{ ins.tabColor }};transition:color .25s ease;">{{ ins.tabLabel }}</span>
+            <span style="width:44px;height:3px;border-radius:2px;background:{{ ins.tabBar }};transition:background .25s ease;"></span>
+          </button>
+        </sc-for>
+      </div>
+      <div ref="{{ setInsRailRef }}" class="no-scrollbar" onScroll="{{ onInsScroll }}" style="display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;">
+        <sc-for list="{{ instructors }}" as="ins" hint-placeholder-count="2">
+          <div style="flex:0 0 100%;scroll-snap-align:center;background:#FFFFFF;border-radius:24px;box-shadow:0 4px 18px rgba(32,33,36,0.08);border:1px solid #E8F0FE;overflow:hidden;transition:border-color .3s ease;" style-hover="border-color:#1A73E8;">
+            <div style="position:relative;aspect-ratio:4/3.4;background:linear-gradient(160deg,#1A73E8,#0D47A1);">
+              <img sc-camel-src="{{ ins.photo }}" alt="Foto de {{ ins.name }}" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+              <div style="position:absolute;left:0;right:0;bottom:0;padding:18px;background:linear-gradient(180deg,transparent,rgba(13,71,161,0.88));">
+                <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:19px;margin:0 0 2px;color:#FFFFFF;">{{ ins.name }}</h3>
+                <p style="font-size:13px;color:#E8F0FE;font-weight:500;margin:0;">{{ ins.role }}</p>
+              </div>
+            </div>
+            <div style="padding:20px 22px 24px;">
+              <div style="display:inline-flex;align-items:center;gap:8px;background:#E8F0FE;color:#0D47A1;font-size:12px;font-weight:700;padding:7px 12px;border-radius:14px;margin-bottom:14px;">🎤 {{ ins.topic }}</div>
+              <p style="font-size:14px;color:#5F6368;line-height:1.65;margin:0 0 18px;">{{ ins.desc }}</p>
+              <sc-if value="{{ ins.linkedin }}" hint-placeholder-val="{{ false }}">
+                <a href="{{ ins.linkedin }}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;background:#FFFFFF;color:#1A73E8;border:1.5px solid #1A73E8;padding:9px 16px;border-radius:22px;font-size:13px;font-weight:600;text-decoration:none;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"></path></svg>
+                  Ver perfil de LinkedIn
+                </a>
+              </sc-if>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+  </div>
+</section>
+
+<!-- PREMIOS -->
+<section id="premios" style="padding:60px 24px;background:#F8FAFD;position:relative;overflow:hidden;">
+  <div data-reveal-key="premios" style="max-width:1000px;margin:0 auto;position:relative;opacity:{{ revealPremios.opacity }};transform:{{ revealPremios.transform }};transition:{{ revealPremios.transition }};">
+    <div style="max-width:640px;margin:0 auto 40px;text-align:center;">
+      <div style="width:40px;height:4px;border-radius:2px;background:#FBBC04;margin:0 auto 16px;"></div>
+      <h2 class="text-gradient" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,32px);margin:0 0 12px;">Lo que te llevas si vas a fondo</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;">
+      <sc-for list="{{ premios }}" as="premio" hint-placeholder-count="3">
+        <div style="background:#FFFFFF;border:1px solid #E8F0FE;border-radius:18px;padding:26px 22px;text-align:center;box-shadow:0 2px 12px rgba(32,33,36,0.05);transition:transform .25s ease, box-shadow .25s ease;" style-hover="transform:translateY(-8px);box-shadow:0 14px 30px rgba(26,115,232,0.14);">
+          <p style="font-size:32px;margin:0 0 12px;">{{ premio.icon }}</p>
+          <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15.5px;margin:0 0 8px;color:#202124;">{{ premio.title }}</h3>
+          <p style="font-size:13.5px;color:#5F6368;line-height:1.6;margin:0;">{{ premio.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding:64px 24px;background:#FFFFFF;">
+  <div data-reveal-key="faq" style="max-width:760px;margin:0 auto;opacity:{{ revealFaq.opacity }};transform:{{ revealFaq.transform }};transition:{{ revealFaq.transition }};">
+    <h2 class="text-gradient" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,32px);margin:0 0 30px;text-align:center;">Antes de que preguntes</h2>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <sc-for list="{{ faqItems }}" as="item" hint-placeholder-count="7">
+        <div style="background:#FFFFFF;border:1px solid #E8F0FE;border-radius:14px;overflow:hidden;transition:border-color .18s ease;" style-hover="border-color:#1A73E8;">
+          <button onClick="{{ item.onToggle }}" aria-expanded="{{ item.isOpen }}" style="width:100%;text-align:left;background:none;border:none;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer;font-family:'Inter',sans-serif;transition:background .18s ease;" style-hover="background:#F8FAFD;">
+            <span style="font-weight:600;font-size:15.5px;color:#202124;">{{ item.q }}</span>
+            <span style="transform:{{ item.iconStyle.transform }};transition:{{ item.iconStyle.transition }};color:#1A73E8;font-size:18px;flex-shrink:0;">▾</span>
+          </button>
+          <div style="max-height:{{ item.answerStyle.maxHeight }};opacity:{{ item.answerStyle.opacity }};overflow:{{ item.answerStyle.overflow }};transition:{{ item.answerStyle.transition }};">
+            <p style="margin:0;padding:0 20px 18px;font-size:14.5px;color:#5F6368;line-height:1.6;">{{ item.a }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+
+<!-- CREA TU CREDENCIAL -->
+<section id="credencial" style="padding:64px 24px;background:#E8F0FE;">
+  <div data-reveal-key="lanyard" style="max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:44px;align-items:center;opacity:{{ revealLanyard.opacity }};transform:{{ revealLanyard.transform }};transition:{{ revealLanyard.transition }};">
+    <div style="display:flex;justify-content:center;">
+      <img src="assets/credencial-template.png" alt="Vista previa de la credencial personalizable de SkillBot Camp" style="width:100%;max-width:260px;height:auto;border-radius:18px;box-shadow:0 18px 40px rgba(13,71,161,0.22);transform:rotate(-3deg);">
+    </div>
+    <div>
+      <div style="width:40px;height:4px;border-radius:2px;background:#EA4335;margin:0 0 16px;"></div>
+      <h2 class="text-gradient" style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,34px);margin:0 0 14px;">Crea tu Credencial Virtual</h2>
+      <p style="font-size:16.5px;color:#5F6368;line-height:1.7;margin:0 0 26px;max-width:440px;">Ya conoces SkillBot Camp. Personaliza tu credencial con tu nombre y fotografía, descárgala y comparte que serás parte.</p>
+      <a href="/credencial" style="background:linear-gradient(135deg,#1A73E8,#0D47A1);color:#FFFFFF;padding:16px 32px;border-radius:28px;font-family:'Poppins',sans-serif;font-weight:700;font-size:15.5px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;box-shadow:0 8px 22px rgba(26,115,232,0.32);transition:transform .18s ease, box-shadow .18s ease;" style-hover="transform:translateY(-2px);box-shadow:0 14px 30px rgba(26,115,232,0.42);">
+        Crear mi credencial
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- COMUNIDAD WHATSAPP -->
+<section id="cta-final" style="padding:64px 24px 0;">
+  <div style="max-width:900px;margin:0 auto;background:linear-gradient(135deg,#34A853,#1A73E8);border-radius:24px;padding:36px 32px;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;box-shadow:0 12px 30px rgba(52,168,83,0.25);">
+    <div style="flex:1 1 320px;min-width:0;">
+      <p style="color:#FFFFFF;font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(20px,2.6vw,24px);margin:0 0 6px;">Da tu primer paso en SkillBot Camp</p>
+      <p style="color:rgba(255,255,255,0.9);font-size:14.5px;line-height:1.55;margin:0;">Únete al grupo oficial para recibir avisos, sesiones, recordatorios y novedades del programa.</p>
+    </div>
+    <!-- Jerarquía: WhatsApp es la acción principal (relleno sólido). Luma es
+         consulta secundaria de la ficha pública (outline sobre el gradiente). -->
+    <div class="skb-cta-final-botones">
+      <a href="https://chat.whatsapp.com/LFE86frAOI07pXXj4SBUGY" target="_blank" rel="noopener noreferrer" style="background:#FFFFFF;color:#1A73E8;padding:16px 30px;border-radius:26px;font-weight:700;font-size:15.5px;text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:transform .18s ease, box-shadow .18s ease;box-shadow:0 6px 16px rgba(0,0,0,0.15);" style-hover="transform:translateY(-2px) scale(1.02);box-shadow:0 10px 22px rgba(0,0,0,0.2);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.2.8.9-3.1-.2-.3C4.1 14.6 3.7 13.3 3.7 12 3.7 7.4 7.4 3.7 12 3.7s8.3 3.7 8.3 8.3-3.7 8-8.3 8zm4.4-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.6 1.1 2.8c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"></path></svg>
+        Unirme al grupo
+      </a>
+      <a href="https://luma.com/eafyb97s" target="_blank" rel="noopener noreferrer" style="background:rgba(255,255,255,0.14);color:#FFFFFF;border:1.5px solid rgba(255,255,255,0.75);padding:12px 24px;border-radius:24px;font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:background .18s ease, border-color .18s ease;" style-hover="background:rgba(255,255,255,0.24);border-color:#FFFFFF;">
+        Ver evento en Luma
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:.85;"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer ref="{{ setFooterRef }}" style="background:linear-gradient(180deg,#FFFFFF 0%,#F2F7FF 55%,#EAF2FD 100%);color:#202124;padding:38px 22px 30px;margin-top:48px;border-top:1px solid #DCE7F5;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-120px;right:-60px;width:280px;height:280px;background:radial-gradient(circle,rgba(26,115,232,0.09) 0%,transparent 70%);border-radius:50%;pointer-events:none;"></div>
+  <div style="max-width:1100px;margin:0 auto;position:relative;">
+    <div style="display:grid;grid-template-columns:{{ footerCols }};gap:{{ footerGap }};">
+
+      <div>
+        <div style="width:34px;height:3px;border-radius:2px;background:#1A73E8;margin:0 0 14px;"></div>
+        <p style="font-family:'Poppins',sans-serif;font-weight:800;font-size:21px;letter-spacing:-0.3px;margin:0 0 10px;color:#202124;">SKILLBOT <span style="color:#1A73E8;">CAMP</span></p>
+        <p style="font-size:13.5px;color:#5F6368;line-height:1.65;margin:0;max-width:34ch;">Parte del programa paraguas Get Certified: Community Edition. Contenido disponible en Google Skills.</p>
+      </div>
+
+      <div style="border-top:{{ footerDivider }};padding-top:{{ footerDividerPad }};">
+        <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;margin:0 0 10px;color:#5F6368;">Organizado por</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 26px;">
+          <!-- Instagram oficial de GDG Open Lima -->
+          <a href="https://www.instagram.com/gdgopen/" target="_blank" rel="noopener noreferrer" style="font-size:13.5px;font-weight:500;color:#1A73E8;text-decoration:none;padding:9px 0;display:inline-flex;align-items:center;gap:7px;border-bottom:1.5px solid transparent;transition:color .18s ease, border-color .18s ease, transform .18s ease;" style-hover="color:#0D47A1;border-color:#0D47A1;transform:translateX(2px);">GDG Open Lima<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:.7;"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+          <a href="https://www.instagram.com/dsc.utp/" target="_blank" rel="noopener noreferrer" style="font-size:13.5px;font-weight:500;color:#1A73E8;text-decoration:none;padding:9px 0;display:inline-flex;align-items:center;gap:7px;border-bottom:1.5px solid transparent;transition:color .18s ease, border-color .18s ease, transform .18s ease;" style-hover="color:#0D47A1;border-color:#0D47A1;transform:translateX(2px);">DSC UTP<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:.7;"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+        </div>
+      </div>
+
+      <div style="border-top:{{ footerDivider }};padding-top:{{ footerDividerPad }};">
+        <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;margin:0 0 10px;color:#5F6368;">Enlaces</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 26px;">
+          <a href="https://www.linkedin.com/company/dsc-utp/posts/?feedView=all" target="_blank" rel="noopener noreferrer" style="font-size:13.5px;font-weight:500;color:#1A73E8;text-decoration:none;padding:9px 0;display:inline-flex;align-items:center;gap:7px;border-bottom:1.5px solid transparent;transition:color .18s ease, border-color .18s ease, transform .18s ease;" style-hover="color:#0D47A1;border-color:#0D47A1;transform:translateX(2px);">LinkedIn<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:.7;"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+          <a href="https://www.instagram.com/dsc.utp/" target="_blank" rel="noopener noreferrer" style="font-size:13.5px;font-weight:500;color:#1A73E8;text-decoration:none;padding:9px 0;display:inline-flex;align-items:center;gap:7px;border-bottom:1.5px solid transparent;transition:color .18s ease, border-color .18s ease, transform .18s ease;" style-hover="color:#0D47A1;border-color:#0D47A1;transform:translateX(2px);">Instagram<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:.7;"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+          <a href="https://www.bing.com/search?q=GOOGLE+SKILLS&amp;cvid=cb287dc837c846c4ac6a9da4c8bfbb4f&amp;gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIGCAEQRRhAMgYIAhBFGDwyBggDEEUYPDIGCAQQRRg80gEIMjcyNmowajSoAgCwAgA&amp;FORM=ANAB01&amp;adppc=EDGEESS&amp;PC=U531" target="_blank" rel="noopener noreferrer" style="font-size:13.5px;font-weight:500;color:#1A73E8;text-decoration:none;padding:9px 0;display:inline-flex;align-items:center;gap:7px;border-bottom:1.5px solid transparent;transition:color .18s ease, border-color .18s ease, transform .18s ease;" style-hover="color:#0D47A1;border-color:#0D47A1;transform:translateX(2px);">Google Skills<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;opacity:.7;"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+  <!-- FLOATING CTA -->
+  <sc-if value="{{ showFloatingCta }}" hint-placeholder-val="{{ true }}">
+    <div class="skb-fab-wrap" style="position:fixed;bottom:calc(24px + env(safe-area-inset-bottom, 0px));right:24px;z-index:999;animation:fadeUp .5s ease forwards;opacity:{{ ctaOpacity }};pointer-events:{{ ctaPointer }};transition:opacity .3s ease;">
+      <a class="skb-fab" aria-label="Unirme al grupo de WhatsApp" href="https://chat.whatsapp.com/LFE86frAOI07pXXj4SBUGY" target="_blank" rel="noopener noreferrer" style="background:linear-gradient(135deg,#1A73E8,#0D47A1);color:#FFFFFF;padding:14px 28px;border-radius:30px;font-family:'Inter',sans-serif;font-weight:700;font-size:15px;text-decoration:none;display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(26,115,232,0.4);animation:btnPulse 2s infinite;transition:transform .2s ease;" style-hover="transform:scale(1.05);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.2.8.9-3.1-.2-.3C4.1 14.6 3.7 13.3 3.7 12 3.7 7.4 7.4 3.7 12 3.7s8.3 3.7 8.3 8.3-3.7 8-8.3 8zm4.4-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.6 1.1 2.8c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"></path></svg>
+        <span class="skb-fab-txt">Unirme al grupo</span>
+        <svg class="skb-fab-flecha" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+      </a>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    headerScrolled: false,
+    showFloatingCta: false,
+    isMobile: false,
+    ctaFits: false,
+    mobileOpen: false,
+    revealed: { hero: true },
+    faqOpen: 0,
+    countdown: { days: '00', hours: '00', minutes: '00', seconds: '00' },
+    countdownEnded: false,
+    routeProgress: 0,
+    routeReduced: false,
+    mStep: 0,
+    mPlaying: false,
+    mCelebrating: false,
+    mFading: false,
+    mCenters: [],
+    hideFloatingCta: false,
+    insActive: 0
+  };
+
+  componentDidMount() {
+    // ctaFits: por debajo de 1200px la columna de contenido (max 1080px) deja
+    // menos margen del que ocupa el pill flotante, así que se superpondría en
+    // cualquier sección. Ahí directamente no se muestra.
+    this.updateWidth = () => {
+      this.setState({ isMobile: window.innerWidth < 860, ctaFits: window.innerWidth >= 1200 });
+      if (this.syncCta) this.syncCta();
+      requestAnimationFrame(() => this.measureCenters());
+    };
+    this.updateWidth();
+    window.addEventListener('resize', this.updateWidth);
+    this.onScroll = () => this.setState({ headerScrolled: window.scrollY > 12, showFloatingCta: window.scrollY > 500 });
+    window.addEventListener('scroll', this.onScroll);
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (en.isIntersecting) {
+          const key = en.target.getAttribute('data-reveal-key');
+          if (key) this.setState((s) => s.revealed[key] ? null : ({ revealed: { ...s.revealed, [key]: true } }));
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-reveal-key]').forEach((el) => this.observer.observe(el));
+
+    this.nodeEls = [];
+    this._nodeRefs = [];
+    this.getNodeRef = (i) => {
+      if (!this._nodeRefs[i]) this._nodeRefs[i] = (el) => { this.nodeEls[i] = el; this.measureCenters(); };
+      return this._nodeRefs[i];
+    };
+    this.measureCenters = () => {
+      if (!this.mobileRouteEl || this.nodeEls.length < 4 || this.nodeEls.slice(0, 4).some((el) => !el)) return;
+      const base = this.mobileRouteEl.getBoundingClientRect().top;
+      const centers = this.nodeEls.slice(0, 4).map((el) => el.getBoundingClientRect().top - base + el.offsetHeight / 2);
+      if (centers.some((c, i) => Math.abs(c - (this.state.mCenters[i] || 0)) > 1)) this.setState({ mCenters: centers });
+    };
+    this.centersRo = new ResizeObserver(() => this.measureCenters());
+
+    // el recorrido mobile se reproduce solo cuando ~45% de la sección es visible
+    const visibleFraction = (entry) => {
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      const rect = entry.boundingClientRect;
+      if (!rect.height) return 0;
+      const visiblePx = Math.max(0, Math.min(rect.bottom, vh) - Math.max(rect.top, 0));
+      return visiblePx / Math.min(rect.height, vh);
+    };
+    const IO_THRESHOLDS = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
+
+    // Secciones sobre las que el CTA flotante taparía contenido real (texto,
+    // requisitos, botones, tarjetas, footer). Se lleva la cuenta por elemento:
+    // un observer con varios targets recibe entries parciales, así que mirar
+    // solo entries[0] dejaba el flag pegado y el botón acababa sobre el footer.
+    // Se indexa por clave estable, no por nodo: al re-renderizar un sc-if React
+    // puede sustituir el elemento, y un Set de nodos se quedaba con la entrada
+    // del nodo viejo para siempre — el CTA no volvía a aparecer nunca.
+    this.ctaBlockers = new Set();
+    // Bloqueadores que solo aplican en móvil: a 375px la columna ocupa todo el
+    // ancho y el FAB pisa el badge enlazado de #propuesta y los acordeones del
+    // FAQ. En desktop esas dos secciones dejan margen de sobra a la derecha.
+    const CTA_SOLO_MOVIL = new Set(['propuesta', 'faq']);
+    // setState en forma funcional: varios callbacks del observer pueden caer en
+    // el mismo tick y this.state todavía no reflejar el anterior. Comparar contra
+    // el state confirmado evita que una actualización se pierda y el flotante se
+    // quede visible sobre el CTA final o el footer.
+    this.syncCta = () => {
+      const hide = [...this.ctaBlockers].some((k) => this.state.isMobile || !CTA_SOLO_MOVIL.has(k));
+      this.setState((prev) => (prev.hideFloatingCta === hide ? null : { hideFloatingCta: hide }));
+    };
+    this.markCtaBlocker = (key, blocked) => {
+      if (blocked) this.ctaBlockers.add(key); else this.ctaBlockers.delete(key);
+      this.syncCta();
+    };
+
+    this.routeVis = new IntersectionObserver((entries) => {
+      const vis = visibleFraction(entries[0]) >= 0.4;
+      this.markCtaBlocker('route', vis);
+      if (vis) this.playMobileRoute(); else this.stopMobileRoute();
+    }, { threshold: IO_THRESHOLDS });
+    this.credVis = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        const key = en.target.id || en.target.tagName.toLowerCase();
+        // Umbral bajo a propósito: los títulos de una sección entran por el
+        // borde inferior y ya colisionan con la esquina del CTA mucho antes de
+        // que la sección ocupe media pantalla.
+        this.markCtaBlocker(key, visibleFraction(en) >= 0.12);
+      });
+    }, { threshold: IO_THRESHOLDS });
+
+    this.routeReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (this.routeReduced) {
+      this.setState({ routeReduced: true, routeProgress: 1 });
+    } else {
+      this.routeTarget = 0;
+      this.routeCurrent = 0;
+      this.measureRoute = () => {
+        if (!this.routeEl) return;
+        const r = this.routeEl.getBoundingClientRect();
+        const travel = r.height - window.innerHeight;
+        if (travel <= 0) { this.routeTarget = r.top < window.innerHeight * 0.5 ? 1 : 0; return; }
+        this.routeTarget = Math.min(1, Math.max(0, -r.top / travel));
+      };
+      this.routeTick = () => {
+        this.measureRoute();
+        // interpolación suave: el bot nunca salta, sigue al scroll con inercia
+        this.routeCurrent += (this.routeTarget - this.routeCurrent) * 0.12;
+        if (Math.abs(this.routeTarget - this.routeCurrent) < 0.0004) this.routeCurrent = this.routeTarget;
+        if (Math.abs(this.routeCurrent - this.state.routeProgress) > 0.002) {
+          this.setState({ routeProgress: this.routeCurrent });
+        }
+        this.routeRaf = requestAnimationFrame(this.routeTick);
+      };
+      this.routeRaf = requestAnimationFrame(this.routeTick);
+    }
+    if (this.routeEl && this.routeEl !== this.observedRouteEl) { this.observedRouteEl = this.routeEl; this.routeVis.observe(this.routeEl); }
+    // Secciones cuya columna de contenido invade la esquina del CTA (medido a
+    // 1400px: #como-funciona lo cubre vía routeVis, y estas tres más el footer
+    // son las únicas que colisionan). El resto deja margen libre de sobra.
+    ['propuesta', 'formato', 'instructora', 'credencial', 'cta-final', 'faq'].forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) this.credVis.observe(el);
+    });
+
+    // EDITAR AQUÍ: fecha y hora reales de inicio del evento cuando estén confirmadas.
+    // El offset -05:00 es obligatorio: sin él, un ISO sin zona se interpreta como
+    // hora LOCAL del visitante y el contador termina a una hora distinta en cada
+    // país. Con el offset explícito el instante es el mismo en todo el mundo.
+    this.eventDate = new Date("2026-09-26T11:00:00-05:00");
+    this.tickCountdown();
+    this.countdownInterval = setInterval(() => this.tickCountdown(), 1000);
+  }
+
+  playMobileRoute() {
+    if (this.routeReduced || this.mTimers) return;
+    this.mTimers = [];
+    const step = (i) => {
+      this.setState({ mStep: i, mPlaying: true, mFading: false, mCelebrating: false });
+      if (i < 3) {
+        this.mTimers.push(setTimeout(() => step(i + 1), 2200));
+      } else {
+        this.mTimers.push(setTimeout(() => this.setState({ mCelebrating: true }), 250));
+        this.mTimers.push(setTimeout(() => this.setState({ mFading: true, mCelebrating: false }), 2400));
+        this.mTimers.push(setTimeout(() => step(0), 2900));
+      }
+    };
+    step(0);
+  }
+
+  stopMobileRoute() {
+    if (this.mTimers) this.mTimers.forEach(clearTimeout);
+    this.mTimers = null;
+    this.setState({ mPlaying: false, mCelebrating: false, mFading: false, mStep: 0 });
+  }
+
+  tickCountdown() {
+    const diff = this.eventDate.getTime() - Date.now();
+    if (diff <= 0) {
+      clearInterval(this.countdownInterval);
+      this.setState({ countdownEnded: true });
+      return;
+    }
+    const pad = (n) => String(n).padStart(2, '0');
+    const days = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const minutes = Math.floor((diff % 3600000) / 60000);
+    const seconds = Math.floor((diff % 60000) / 1000);
+    this.setState({ countdown: { days: pad(days), hours: pad(hours), minutes: pad(minutes), seconds: pad(seconds) } });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWidth);
+    window.removeEventListener('scroll', this.onScroll);
+    if (this.observer) this.observer.disconnect();
+    if (this.countdownInterval) clearInterval(this.countdownInterval);
+    if (this.routeRaf) cancelAnimationFrame(this.routeRaf);
+    if (this.routeVis) this.routeVis.disconnect();
+    if (this.credVis) this.credVis.disconnect();
+    if (this.centersRo) this.centersRo.disconnect();
+    this.stopMobileRoute();
+  }
+
+  revealStyle(key) {
+    const on = !!this.state.revealed[key];
+    return { opacity: on ? 1 : 0, transform: on ? 'translateY(0)' : 'translateY(28px)', transition: 'opacity .7s ease, transform .7s ease' };
+  }
+
+  toggleMobileMenu() { this.setState((s) => ({ mobileOpen: !s.mobileOpen })); }
+  closeMobileMenu() { this.setState({ mobileOpen: false }); }
+  toggleFaq(i) { this.setState((s) => ({ faqOpen: s.faqOpen === i ? null : i })); }
+  goToInstructor(i) {
+    if (this.insRailEl) this.insRailEl.scrollTo({ left: i * this.insRailEl.offsetWidth, behavior: 'smooth' });
+    this.setState({ insActive: i });
+  }
+  onInsScroll(e) {
+    const el = e.target;
+    const i = Math.round(el.scrollLeft / el.offsetWidth);
+    if (i !== this.state.insActive) this.setState({ insActive: i });
+  }
+
+  renderVals() {
+    const s = this.state;
+    const navLinks = [
+      { href: '#propuesta', label: 'Sobre el programa' },
+      { href: '#como-funciona', label: 'Cómo funciona' },
+      { href: '#recorrido', label: 'Learning Path' },
+      { href: '#instructora', label: 'Guías' },
+      { href: '#faq', label: 'FAQ' }
+    ];
+    const cursos = [
+      { num: '01', titulo: 'Transformación digital con Google Cloud', desc: 'Conceptos fundamentales de la nube, infraestructura de red global y modelo de responsabilidad compartida.', icon: '☁️', color: '#1A73E8' },
+      { num: '02', titulo: 'Transformación de datos con Google Cloud', desc: 'Valor de los datos, consolidación y herramientas de analítica.', icon: '📊', color: '#34A853' },
+      { num: '03', titulo: 'Innovación con inteligencia artificial de Google Cloud', desc: 'Cómo las organizaciones utilizan IA y aprendizaje automático para transformar industrias.', icon: '🤖', color: '#EA4335' },
+      { num: '04', titulo: 'Modernización de infraestructura y aplicaciones con Google Cloud', desc: 'Modernización de infraestructura, contenedores, Kubernetes y valor de las APIs.', icon: '🏗️', color: '#FBBC04' },
+      { num: '05', titulo: 'Confianza y seguridad con Google Cloud', desc: 'Fundamentos de seguridad en la nube y enfoque multicapa de Google Cloud.', icon: '🔒', color: '#0D47A1' },
+      { num: '06', titulo: 'Escalamiento y operaciones con Google Cloud', desc: 'Operaciones y escalamiento en la nube.', icon: '⚙️', color: '#4FC3F7' }
+    ];
+    const steps = cursos.map((c, i) => ({ num: c.num, label: c.titulo, desc: c.desc, color: c.color, icon: c.icon, leftCard: i % 2 === 0 }));
+    const M_CHECK = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>';
+    const CHECK = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>';
+    const ICONS = {
+      infosession: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>',
+      inscripcion: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>',
+      camp: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"></path></svg>',
+      completa: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M8.2 13.9L7 22l5-3 5 3-1.2-8.1"></path></svg>'
+    };
+    const flowSteps = [
+      { num: '01', icon: 'infosession', title: 'InfoSession', desc: 'Conoce SkillBot Camp y descubre cómo participar.', color: '#1A73E8', highlight: true },
+      { num: '02', icon: 'inscripcion', title: 'Inscripción', desc: 'Regístrate y activa tu acceso a Google Skills.', color: '#34A853' },
+      { num: '03', icon: 'camp', title: 'SkillBot Camp', desc: 'Avanza en tu Learning Path con sesiones de acompañamiento.', color: '#FBBC04' },
+      { num: '04', icon: 'completa', title: 'Completa tu ruta', desc: 'Finaliza Cloud Digital Leader y obtén tus insignias.', color: '#EA4335' }
+    ];
+    const instructors = [
+      { photo: 'assets/jose-guerra.png', name: 'José Guerra', role: 'GDG Open Lima', tag: 'Dicta la InfoSession', topic: 'InfoSession: certificaciones de Google y el programa', desc: 'Presenta el programa y explica cómo funcionan las certificaciones de Google en la sesión informativa inicial.', linkedin: 'https://www.linkedin.com/in/jose-carlos-guerra-martinez/' },
+      { photo: 'assets/katherine-chauca.png', name: 'Katherine Chauca Escobar', role: 'Ingeniera Informática · Product Owner', tag: 'Instructora de las 6 sesiones de taller', topic: 'Cloud Digital Leader: el Learning Path paso a paso', desc: 'Acompaña a la comunidad en su recorrido hacia Cloud a través de sesiones en vivo y guía práctica.', linkedin: 'https://www.linkedin.com/in/katherinechauca/' }
+    ].map((ins, i) => ({
+      ...ins,
+      tabLabel: 'Ponente ' + (i + 1),
+      tabSelected: s.insActive === i,
+      tabColor: s.insActive === i ? '#1A73E8' : '#9AA0A6',
+      tabBar: s.insActive === i ? '#1A73E8' : 'transparent',
+      onTab: () => this.goToInstructor(i)
+    }));
+    const premios = [
+      { icon: '🎓', title: 'Certificado de participación', desc: 'Para quienes asistan a las sesiones de taller.' },
+      { icon: '⭐', title: 'Mejor Participante', desc: 'Para quienes asistan a todas las sesiones de taller.' },
+      { icon: '🏅', title: 'Insignias oficiales de Google', desc: 'Para quienes completen su Learning Path en Google Skills y finalicen la ruta de Cloud Digital Leader.' }
+    ];
+    const requisitos = [
+      'Cuenta de Google/Gmail.',
+      'Laptop o computadora con navegador.',
+      'Tiempo para completar el Learning Path.',
+      'No necesitas experiencia previa en Cloud.'
+    ];
+    const faqRaw = [
+      { q: '¿Es realmente gratis?', a: 'Sí, incluido el acceso a Google Skills, que normalmente cuesta créditos. Por este programa es completamente gratuito.' },
+      { q: '¿Tengo que asistir a la InfoSession?', a: 'Sí. En la InfoSession, dictada por José Guerra, se entrega el link de registro a los cursos.' },
+      { q: '¿Cuánto tiempo debo dedicarle?', a: 'Alrededor de 12 horas de estudio en Google Skills, distribuidas a lo largo del programa, más las sesiones en vivo.' },
+      { q: '¿Qué pasa si falto a una sesión?', a: 'Puedes seguir participando con normalidad, pero pierdes la opción al certificado de Mejor Participante, que requiere asistencia completa.' },
+      { q: '¿Qué obtengo al completar el Learning Path?', a: 'Cada curso completado otorga una insignia. Al completar los 6 cursos obtienes la insignia del Learning Path completo.' },
+      { q: '¿El programa entrega la certificación oficial?', a: 'No. Obtienes las insignias del Learning Path. La certificación oficial de Cloud Digital Leader requiere un examen aparte de US$99, con supervisión.' },
+      { q: '¿Necesito ser estudiante de UTP?', a: 'No. SkillBot Camp está abierto al público general y con aforo ilimitado.' }
+    ];
+    const faqItems = faqRaw.map((item, i) => ({
+      ...item,
+      isOpen: s.faqOpen === i,
+      onToggle: () => this.toggleFaq(i),
+      iconStyle: { transform: s.faqOpen === i ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform .25s ease' },
+      answerStyle: { maxHeight: s.faqOpen === i ? '300px' : '0px', opacity: s.faqOpen === i ? 1 : 0, overflow: 'hidden', transition: 'max-height .3s ease, opacity .3s ease' }
+    }));
+
+    const mFlow = flowSteps.map((fs, i) => {
+      const active = i === s.mStep;
+      const doneOnly = i < s.mStep;
+      return {
+        ...fs,
+        // renderVals corre también en el primer render, antes de que
+        // componentDidMount defina getNodeRef. Sin esta guarda lanza
+        // "this.getNodeRef is not a function" en cada carga.
+        nodeRef: this.getNodeRef ? this.getNodeRef(i) : null,
+        iconHtml: { __html: doneOnly ? M_CHECK : ICONS[fs.icon] },
+        nodeBg: active ? '#1A73E8' : (doneOnly ? '#E8F0FE' : '#FFFFFF'),
+        nodeBorder: active ? '#1A73E8' : (doneOnly ? '#B3D1F7' : '#E3ECFA'),
+        nodeIcon: active ? '#FFFFFF' : (doneOnly ? '#1A73E8' : '#9AA0A6'),
+        nodeShadow: active ? '0 0 0 5px rgba(26,115,232,0.14)' : 'none',
+        numColor: active ? '#1A73E8' : '#9AA0A6',
+        titleColor: active || doneOnly ? '#202124' : '#5F6368',
+        rowOpacity: active || doneOnly ? 1 : 0.55
+      };
+    });
+
+    // un único progreso 0-1 alimenta bot, línea y estado de cada nodo
+    const p = s.routeProgress;
+    const arrived = p > 0.985;
+    const flowStepsUi = flowSteps.map((fs, i) => {
+      const th = i / (flowSteps.length - 1);
+      const active = p >= th - 0.04;
+      const done = p > th + 0.06;
+      return {
+        ...fs,
+        iconHtml: { __html: done ? CHECK : ICONS[fs.icon] },
+        nodeBg: active ? '#1A73E8' : '#FFFFFF',
+        nodeBorder: active ? '#1A73E8' : '#D7E3F7',
+        nodeIcon: active ? '#FFFFFF' : '#9AA0A6',
+        nodeShadow: active ? '0 0 0 6px rgba(26,115,232,0.12)' : '0 2px 8px rgba(32,33,36,0.06)',
+        numColor: active ? '#1A73E8' : '#9AA0A6',
+        titleColor: active ? '#202124' : '#5F6368'
+      };
+    });
+    return {
+      navLinks, cursos, steps, flowSteps: flowStepsUi, instructors, premios, requisitos, faqItems,
+      isMobile: s.isMobile,
+      mobileOpen: s.mobileOpen,
+      // En móvil el flotante se reduce a un botón circular de 54px (.skb-fab),
+      // que apenas invade contenido; ahí la guarda por ancho no aplica. En
+      // desktop sigue siendo el pill y solo sale si hay margen libre para él.
+      showFloatingCta: s.showFloatingCta && (s.isMobile || s.ctaFits),
+      ctaOpacity: s.hideFloatingCta ? 0 : 1,
+      ctaPointer: s.hideFloatingCta ? 'none' : 'auto',
+      countdown: s.countdown,
+      countdownEnded: s.countdownEnded,
+      toggleMobileMenu: () => this.toggleMobileMenu(),
+      closeMobileMenu: () => this.closeMobileMenu(),
+      headerStyle: { padding: s.headerScrolled ? '10px 0' : '18px 0', boxShadow: s.headerScrolled ? '0 4px 20px rgba(32,33,36,0.08)' : 'none' },
+      hamburgerLine1Style: { transform: s.mobileOpen ? 'translateY(8.5px) rotate(45deg)' : 'none', transition: 'transform .25s ease' },
+      hamburgerLine2Style: { opacity: s.mobileOpen ? 0 : 1, transition: 'opacity .25s ease' },
+      hamburgerLine3Style: { transform: s.mobileOpen ? 'translateY(-8.5px) rotate(-45deg)' : 'none', transition: 'transform .25s ease' },
+      mobilePanelStyle: { maxHeight: s.mobileOpen ? '400px' : '0px', opacity: s.mobileOpen ? 1 : 0, overflow: 'hidden', transition: 'max-height .3s ease, opacity .3s ease' },
+      revealHero: this.revealStyle('hero'),
+      revealPropuesta: this.revealStyle('propuesta'),
+      revealParaQuien: this.revealStyle('paraquien'),
+      setRouteRef: (el) => {
+        this.routeEl = el;
+        if (!el || el === this.observedRouteEl || !this.routeVis) return;
+        this.observedRouteEl = el;
+        this.routeVis.disconnect();
+        this.routeVis.observe(el);
+      },
+      setMobileRouteRef: (el) => {
+        this.mobileRouteEl = el;
+        if (!el || el === this.observedMobileEl || !this.centersRo) return;
+        this.observedMobileEl = el;
+        this.centersRo.disconnect();
+        this.centersRo.observe(el);
+        requestAnimationFrame(() => this.measureCenters());
+      },
+      mFlowSteps: mFlow,
+      mCelebrating: s.mCelebrating,
+      mBotTop: (s.mCenters[s.mStep] || 21) + 'px',
+      mBotOpacity: s.mFading ? 0 : 1,
+      mBotScale: s.mCelebrating ? 1.08 : 1,
+      mBotRotate: (s.mStep % 2 === 0 ? '-2deg' : '2deg'),
+      mRouteLineTop: (s.mCenters[0] || 21) + 'px',
+      mRouteLineHeight: Math.max(0, (s.mCenters[3] || 0) - (s.mCenters[0] || 0)) + 'px',
+      mProgressHeight: Math.max(0, (s.mCenters[s.mStep] || 0) - (s.mCenters[0] || 0)) + 'px',
+      hideFloatingCta: s.hideFloatingCta,
+      footerCols: s.isMobile ? '1fr' : '1.6fr 1fr 0.9fr',
+      footerGap: s.isMobile ? '22px' : '40px',
+      footerDivider: s.isMobile ? '1px solid #DCE7F5' : 'none',
+      footerDividerPad: s.isMobile ? '20px' : '0',
+      setFooterRef: (el) => {
+        if (!el || el === this.observedFooterEl || !this.credVis) return;
+        this.observedFooterEl = el;
+        this.credVis.observe(el);
+      },
+      onInsScroll: (e) => this.onInsScroll(e),
+      setInsRailRef: (el) => { this.insRailEl = el; },
+      routeSectionHeight: (s.routeReduced || s.isMobile) ? 'auto' : '240vh',
+      routeStickyPosition: (s.routeReduced || s.isMobile) ? 'static' : 'sticky',
+      routeStickyHeight: (s.routeReduced || s.isMobile) ? 'auto' : '100vh',
+      botLeft: (12.5 + p * 75) + '%',
+      botTop: 'calc(24px + ' + (p * 100) + '% * 0.82)',
+      botScale: arrived ? 1.05 : 1,
+      botTransition: s.routeReduced ? 'none' : 'left .18s linear, top .18s linear, width .3s ease, height .3s ease, transform .4s ease',
+      progressWidth: (p * 75) + '%',
+      progressHeight: 'calc(' + (p * 100) + '% * 0.82)',
+      revealComoFunciona: this.revealStyle('comofunciona'),
+      revealRecorrido: this.revealStyle('recorrido'),
+      revealFormato: this.revealStyle('formato'),
+      revealInstructora: this.revealStyle('instructora'),
+      revealPremios: this.revealStyle('premios'),
+      revealFaq: this.revealStyle('faq'),
+      revealLanyard: this.revealStyle('lanyard'),
+    };
+  }
+}
+</script>
+</body>
+</html>

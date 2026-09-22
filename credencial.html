@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Crea tu credencial de SkillBot Camp</title>
+<meta name="description" content="Personaliza tu credencial con tu foto y tu nombre, descárgala y publícala en el muro de la comunidad SkillBot Camp.">
+<meta name="theme-color" content="#1A73E8">
+<link rel="canonical" href="https://skillbot-camp.vercel.app/credencial">
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SkillBot Camp">
+<meta property="og:locale" content="es_PE">
+<meta property="og:title" content="Crea tu credencial de SkillBot Camp">
+<meta property="og:description" content="Personaliza tu credencial con tu foto y tu nombre, descárgala y publícala en el muro de la comunidad SkillBot Camp.">
+<meta property="og:url" content="https://skillbot-camp.vercel.app/credencial">
+<meta property="og:image" content="https://skillbot-camp.vercel.app/assets/og-cover.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SkillBot Camp — Developer Student Clubs UTP x GDG Open Lima">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Crea tu credencial de SkillBot Camp">
+<meta name="twitter:description" content="Personaliza tu credencial con tu foto y tu nombre, descárgala y publícala en el muro de la comunidad SkillBot Camp.">
+<meta name="twitter:image" content="https://skillbot-camp.vercel.app/assets/og-cover.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+
+<script>
+  // Sirve React/Babel desde este mismo dominio en vez de unpkg.com.
+  // El runtime (support.js) consulta este mapa antes de ir al CDN; ver cdnScriptFor().
+  // Definirlo también evita que support.js vuelva a descargar la propia página al arrancar.
+  window.__resources = {
+    "https://unpkg.com/react@18.3.1/umd/react.production.min.js": "/vendor/react-18.3.1.production.min.js",
+    "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js": "/vendor/react-dom-18.3.1.production.min.js"
+    // Babel no se mapea: el runtime solo lo pide para módulos JSX vía <x-import>,
+    // y esta página no usa ninguno. Sin entrada aquí, si algún día hiciera falta
+    // caería al CDN en vez de dar 404 contra un archivo que no existe.
+  };
+</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin:0; font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; background:#F8FAFD; }
+  *:focus-visible { outline:3px solid #1A73E8; outline-offset:2px; }
+  a { color:#1A73E8; }
+  a:hover { color:#0D47A1; }
+  input::placeholder { color:#9AA0A6; font-weight:400; }
+  .skb-muro-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+  @media (max-width:860px) {
+    .skb-muro-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+  }
+  @media (max-width:560px) {
+    .skb-muro-grid { grid-template-columns:1fr; gap:16px; }
+  }
+  .wall-scroll::-webkit-scrollbar { height:6px; }
+  .wall-scroll::-webkit-scrollbar-thumb { background:#D7E3F7; border-radius:3px; }
+  input[type=range] { accent-color:#1A73E8; }
+  /* Animación del muro: efecto 3D sutil al pasar el mouse */
+  .skb-muro-grid figure img {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+  }
+  .skb-muro-grid figure:hover img {
+    transform: perspective(800px) rotateX(5deg) rotateY(-5deg) scale(1.04);
+    box-shadow: 0 20px 40px rgba(32,33,36,0.15);
+  }
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#F8FAFD;color:#202124;font-family:'Inter',sans-serif;overflow-x:hidden;">
+
+<header style="background:#FFFFFF;border-bottom:1px solid #E8F0FE;padding:16px 0;">
+  <div style="max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+    <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#1A73E8"></circle><path d="M8 13l2.5 2.5L16 9.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:18px;color:#202124;letter-spacing:-0.3px;">SKILLBOT <span style="color:#1A73E8;">CAMP</span></span>
+    </a>
+    <a href="/" style="font-size:14px;font-weight:600;color:#5F6368;text-decoration:none;">← Volver a la landing</a>
+  </div>
+</header><main style="max-width:1120px;margin:0 auto;padding:52px 24px 80px;">
+  <div style="max-width:680px;margin:0 0 48px;">
+    <div style="width:40px;height:4px;border-radius:2px;background:#1A73E8;margin:0 0 18px;"></div>
+    <h1 style="font-family: 'Poppins',sans-serif; font-weight: 800; font-size: clamp(28px,4vw,42px); line-height: 1.12; margin: 0 0 14px; color: #202124;">¡Crea tu credencial y demuestra que eres parte de SkillBot Camp!&nbsp;</h1>
+    <p style="font-size: 17px; line-height: 1.6; color: #5F6368; margin: 0 0 22px;">Personaliza tu credencial con tu foto y nombre, descárgala y compártela con tu comunidad.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <span style="background:#E8F0FE;color:#0D47A1;font-weight:700;font-size:12px;letter-spacing:0.5px;padding:7px 14px;border-radius:16px;">PERSONALIZA</span>
+      <span style="background:#E8F0FE;color:#0D47A1;font-weight:700;font-size:12px;letter-spacing:0.5px;padding:7px 14px;border-radius:16px;">DESCARGA</span>
+      <span style="background:#E8F0FE;color:#0D47A1;font-weight:700;font-size:12px;letter-spacing:0.5px;padding:7px 14px;border-radius:16px;">COMPARTE</span>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:44px;align-items:flex-start;">
+
+    <div style="flex:1 1 340px;min-width:0;max-width:460px;">
+      <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:#5F6368;margin:0 0 16px;">TU CREDENCIAL VIRTUAL</p>
+      <div ref="{{ setWrapRef }}" style="position:relative;width:100%;max-width:440px;height:{{ previewHeight }};">
+        <div style="position:absolute;top:0;left:0;width:1084px;height:1451px;transform:scale({{ previewScale }});transform-origin:top left;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(32,33,36,0.14);">
+          <img src="assets/credencial-template.png" alt="Plantilla de la credencial de SkillBot Camp" style="position:absolute;top:0;left:0;width:1084px;height:1451px;">
+
+          <sc-if value="{{ hasPhoto }}" hint-placeholder-val="{{ false }}">
+            <div onPointerDown="{{ onFramePointerDown }}" onWheel="{{ onFrameWheel }}" style="position:absolute;left:292px;top:492px;width:489px;height:502px;border-radius:48px;overflow:hidden;background:transparent;cursor:{{ frameCursor }};touch-action:none;">
+              <div role="img" aria-label="Tu fotografía" style="position:absolute;left:{{ photoLeft }};top:{{ photoTop }};width:{{ photoWidth }};height:{{ photoHeight }};background-image:{{ photoCss }};background-size:100% 100%;background-repeat:no-repeat;pointer-events:none;"></div>
+            </div>
+          </sc-if>
+
+          <div style="position:absolute;left:208px;top:1033px;width:666px;height:92px;background:#FFFFFF;border-radius:44px;"></div>
+          <div style="position:absolute;left:202px;top:1027px;width:678px;height:104px;display:flex;align-items:center;justify-content:center;padding:0 31px;box-sizing:border-box;">
+            <span style="font-family:'Poppins',sans-serif;font-weight:800;color:#101B33;white-space:nowrap;font-size:{{ nameFontSize }};">{{ displayName }}</span>
+          </div>
+        </div>
+      </div>
+
+      <sc-if value="{{ hasPhoto }}" hint-placeholder-val="{{ false }}">
+        <div style="max-width:440px;margin:14px 0 0;display:flex;flex-direction:column;gap:10px;">
+          <p style="font-size:12px;color:#5F6368;margin:0;">Arrastra la foto dentro del marco para ajustar el encuadre.</p>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5F6368" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+            <input type="range" min="{{ zoomMin }}" max="{{ zoomMax }}" step="0.01" value="{{ zoom }}" onChange="{{ onZoom }}" aria-label="Zoom de la fotografía" style="flex:1;min-width:0;">
+            <button type="button" onClick="{{ onResetFraming }}" style="background:none;border:none;color:#1A73E8;font-family:'Inter',sans-serif;font-size:12.5px;font-weight:600;cursor:pointer;padding:4px 2px;white-space:nowrap;">Centrar</button>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+
+    <div style="flex:1.3 1 380px;min-width:0;background:#FFFFFF;border:1px solid #E8F0FE;border-radius:24px;padding:30px 28px;box-shadow:0 4px 18px rgba(32,33,36,0.06);box-sizing:border-box;">
+      <h2 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:26px;letter-spacing:-0.3px;margin:0 0 8px;color:#202124;">Crea tu credencial</h2>
+      <p style="font-size:14.5px;color:#5F6368;line-height:1.55;margin:0 0 26px;">Personalízala en segundos y compártela con la comunidad.</p>
+
+      <form onSubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;gap:22px;">
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <label for="ly-nombre" style="font-size:13.5px;font-weight:600;color:#202124;">Nombre</label>
+          <input id="ly-nombre" value="{{ nombre }}" onChange="{{ onNombre }}" maxLength="{{ maxChars }}" placeholder="Ej. José Alberto" style="border:1.5px solid #E8F0FE;border-radius:14px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:15px;font-weight:500;color:#202124;outline:none;background:#F8FAFD;transition:border-color .18s ease;" style-focus="border-color:#1A73E8;">
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <label for="ly-apellido" style="font-size:13.5px;font-weight:600;color:#202124;">Apellido</label>
+          <input id="ly-apellido" value="{{ apellido }}" onChange="{{ onApellido }}" maxLength="{{ maxChars }}" placeholder="Ej. Hurtado Rivas" style="border:1.5px solid #E8F0FE;border-radius:14px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:15px;font-weight:500;color:#202124;outline:none;background:#F8FAFD;transition:border-color .18s ease;" style-focus="border-color:#1A73E8;">
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <label style="font-size:13.5px;font-weight:600;color:#202124;">Fotografía</label>
+
+          <sc-if value="{{ hasPhoto }}" hint-placeholder-val="{{ false }}">
+            <button type="button" onClick="{{ onPickPhoto }}" onDrop="{{ onDrop }}" onDragOver="{{ onDragOver }}" onDragLeave="{{ onDragLeave }}" style="border:1.5px solid {{ dropBorderColor }};background:{{ dropBackground }};border-radius:14px;padding:9px 12px;display:flex;align-items:center;gap:12px;cursor:pointer;font-family:'Inter',sans-serif;text-align:left;transition:border-color .18s ease, background .18s ease;">
+              <span style="width:38px;height:38px;border-radius:10px;flex-shrink:0;background-image:{{ photoCss }};background-size:cover;background-position:center;"></span>
+              <span style="font-size:14px;font-weight:600;color:#1A73E8;">Cambiar fotografía</span>
+              <span style="font-size:11.5px;color:#5F6368;margin-left:auto;">Foto cargada</span>
+            </button>
+          </sc-if>
+
+          <sc-if value="{{ noPhoto }}" hint-placeholder-val="{{ true }}">
+            <button type="button" onClick="{{ onPickPhoto }}" onDrop="{{ onDrop }}" onDragOver="{{ onDragOver }}" onDragLeave="{{ onDragLeave }}" style="border:2px dashed {{ dropBorderColor }};background:{{ dropBackground }};border-radius:16px;padding:22px 18px;display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;font-family:'Inter',sans-serif;transition:border-color .18s ease, background .18s ease;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1A73E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M17 8l-5-5-5 5"></path><path d="M12 3v12"></path></svg>
+              <span style="font-size:15px;font-weight:700;color:#1A73E8;font-family:'Poppins',sans-serif;">Sube tu fotografía</span>
+              <span style="font-size:12.5px;color:#5F6368;">Arrastra una imagen aquí o haz clic para buscarla</span>
+            </button>
+          </sc-if>
+
+          
+          <input ref="{{ fileRef }}" type="file" accept="image/*" onChange="{{ onPhotoFile }}" style="display:none;">
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <button type="submit" style="background:linear-gradient(135deg,#1A73E8,#0D47A1);color:#FFFFFF;border:none;border-radius:18px;padding:15px;font-family:'Poppins',sans-serif;font-weight:700;font-size:15.5px;letter-spacing:0.3px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;box-sizing:border-box;transition:transform .18s ease, box-shadow .18s ease;box-shadow:0 6px 18px rgba(26,115,232,0.28);" style-hover="transform:translateY(-2px);box-shadow:0 12px 26px rgba(26,115,232,0.4);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg>
+            {{ downloadLabel }}
+          </button>
+
+          <div style="display:flex;flex-wrap:wrap;gap:12px;">
+            <button type="button" onClick="{{ onPublish }}" style="flex:1 1 160px;min-width:0;background:{{ publishBg }};color:#0D47A1;border:1.5px solid {{ publishBorder }};border-radius:18px;padding:13px 14px;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;box-sizing:border-box;transition:background .18s ease, border-color .18s ease;" style-hover="background:#E8F0FE;border-color:#1A73E8;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              {{ publishLabel }}
+            </button>
+
+            <button type="button" onClick="{{ onShareLinkedin }}" style="flex:1 1 160px;min-width:0;background:#FFFFFF;color:#0A66C2;border:1.5px solid #DCE7F5;border-radius:18px;padding:13px 14px;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;box-sizing:border-box;transition:background .18s ease, border-color .18s ease;" style-hover="background:#F0F7FF;border-color:#0A66C2;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"></path></svg>
+              Compartir en LinkedIn
+            </button>
+          </div>
+
+          <p style="margin:0;min-height:17px;font-size:12.5px;font-weight:500;color:#5F6368;line-height:1.4;">{{ statusMessage }}</p>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <section style="margin-top:80px;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:26px;">
+      <div>
+        <div style="width:40px;height:4px;border-radius:2px;background:#1A73E8;margin:0 0 16px;"></div>
+        <h2 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(22px,3vw,30px);margin:0 0 8px;color:#202124;">Muro de la comunidad</h2>
+        <p style="font-size:15px;color:#5F6368;margin:0;">Descubre a quienes ya son parte de SkillBot Camp.</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;">
+        <p style="font-size:12.5px;font-weight:600;color:#5F6368;margin:0;">{{ wallCountLabel }}</p>
+      </div>
+    </div>
+
+    <sc-if value="{{ wallLoading }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;gap:22px;padding:6px 2px 18px;" aria-live="polite" aria-busy="true">
+        <div style="flex:0 0 {{ cardWidthPx }};aspect-ratio:{{ cardAspect }};border-radius:16px;background:#ECF2FC;"></div>
+        <div style="flex:0 0 {{ cardWidthPx }};aspect-ratio:{{ cardAspect }};border-radius:16px;background:#ECF2FC;"></div>
+        <div style="flex:0 0 {{ cardWidthPx }};aspect-ratio:{{ cardAspect }};border-radius:16px;background:#ECF2FC;"></div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ hasWallError }}" hint-placeholder-val="{{ false }}">
+      <div style="background:#FFFFFF;border:1px solid #F3D3D3;border-radius:22px;padding:34px 28px;text-align:center;">
+        <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:16.5px;color:#202124;margin:0 0 8px;">{{ wallErrorMessage }}</p>
+        <p style="font-size:14px;color:#5F6368;margin:0 0 18px;">Puede ser un problema temporal de conexión.</p>
+        <button type="button" onClick="{{ onRetryWall }}" style="background:#FFFFFF;color:#0D47A1;border:1.5px solid #B3D1F7;border-radius:16px;padding:11px 22px;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;cursor:pointer;" style-hover="background:#E8F0FE;border-color:#1A73E8;">Reintentar</button>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ wallUnavailable }}" hint-placeholder-val="{{ false }}">
+      <div style="background:#FFFFFF;border:1px dashed #D7E3F7;border-radius:22px;padding:44px 28px;text-align:center;">
+        <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:16.5px;color:#202124;margin:0 0 8px;">El muro estará disponible muy pronto</p>
+        <p style="font-size:14px;color:#5F6368;margin:0;">Mientras tanto puedes descargar tu credencial y compartirla en LinkedIn.</p>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ wallEmpty }}" hint-placeholder-val="{{ true }}">
+      <div style="background:#FFFFFF;border:1px dashed #D7E3F7;border-radius:22px;padding:44px 28px;text-align:center;">
+        <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:16.5px;color:#202124;margin:0 0 8px;">Todavía no hay credenciales publicadas</p>
+        <p style="font-size:14px;color:#5F6368;margin:0;">Completa tu nombre, apellido y fotografía, y publica la primera.</p>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ wallHasItems }}" hint-placeholder-val="{{ false }}">
+      <div class="skb-muro-grid" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding:6px 0 18px;">
+        <sc-for list="{{ wall }}" as="entry" hint-placeholder-count="3">
+          <figure style="margin:0;">
+            <img sc-camel-src="{{ entry.url }}" alt="{{ entry.alt }}" loading="lazy" decoding="async" width="542" height="726" style="display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 10px 26px rgba(32,33,36,0.12);background:#ECF2FC;">
+          </figure>
+        </sc-for>
+      </div>
+    </sc-if>
+  </section>
+</main>
+
+
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+// Geometría normalizada respecto a la plantilla (0-1). Los valores en px del sistema de
+// coordenadas de la plantilla se derivan de aquí, así todo escala junto y nada depende
+// del viewport: el preview dibuja en ese mismo espacio y luego se escala con transform.
+const TPL = { W: 1084, H: 1451, SCALE: 1 };
+const FRAME_N = { x: 292 / 1084, y: 492 / 1451, w: 489 / 1084, h: 502 / 1451, r: 48 / 1084 };
+const PILL_N = { x: 202 / 1084, y: 1027 / 1451, w: 678 / 1084, h: 104 / 1451 };
+const FRAME = { x: FRAME_N.x * TPL.W, y: FRAME_N.y * TPL.H, w: FRAME_N.w * TPL.W, h: FRAME_N.h * TPL.H, r: FRAME_N.r * TPL.W };
+const PILL = { x: PILL_N.x * TPL.W, y: PILL_N.y * TPL.H, w: PILL_N.w * TPL.W, h: PILL_N.h * TPL.H, r: 46, inset: 6 };
+// Zona de seguridad del nombre: ~4.5% por lado (9% del ancho del pill en total).
+const NAME = { safe: 0.045, max: 64, min: 30, color: '#101B33' };
+const ZOOM = { min: 1, max: 2.5 };
+const FOCUS_Y = 0.3; // encuadre inicial: ancla al tercio superior para no cortar el rostro
+const MAX_CHARS = 28;
+const CARD_W = 214;
+
+// Endpoint del muro y tamaño exacto del JPEG que se sube. El servidor rechaza
+// cualquier imagen que no mida justo WALL.W x WALL.H, así que estos dos números
+// tienen que coincidir con IMAGE_W / IMAGE_H en api/_wall-store.js.
+const API = '/api/wall';
+const WALL = { W: 542, H: 726 };
+
+function blobToDataUrl(blob) {
+  return new Promise((resolve, reject) => {
+    const r = new FileReader();
+    r.onload = () => resolve(r.result);
+    r.onerror = () => reject(r.error || new Error('read failed'));
+    r.readAsDataURL(blob);
+  });
+}
+function shareText() {
+  const link = (typeof window !== 'undefined' && window.location && window.location.origin) ? window.location.origin : '';
+  return '🚀 ¡Seré parte de SkillBot Camp!\n\n' +
+    'Una iniciativa de Developer Student Clubs - UTP × GDG Open Lima 🇵🇪, donde daré mis primeros pasos en Google Cloud y avanzaré en el Learning Path de Cloud Digital Leader. ☁️\n\n' +
+    '💻 Todo el programa será 100% virtual, así que podré aprender y participar desde cualquier lugar.\n\n' +
+    '¿Quieres ser parte también?\n' +
+    '🔗 ' + link + '\n\n' +
+    '#SkillBotCamp #GetCertified #GoogleCloud #DSCUTP #GDGOpenLima';
+}
+const SHARE_URL = 'https://www.linkedin.com/feed/?shareActive=true&text=';
+
+class Component extends DCLogic {
+  state = {
+    nombre: '',
+    apellido: '',
+    photo: null,
+    photoW: 0,
+    photoH: 0,
+    zoom: 1,
+    dx: 0,
+    dy: 0,
+    scale: 0.4,
+    dragOver: false,
+    dragging: false,
+    busy: false,
+    publishing: false,
+    status: '',
+    justPublished: false,
+    wall: [],
+    wallLoading: true,
+    wallError: '',
+    wallConfigured: true
+  };
+
+  componentDidMount() {
+    this.loadWall();
+    this.measureCtx = document.createElement('canvas').getContext('2d');
+    this.ro = new ResizeObserver((entries) => {
+      const w = entries[0].contentRect.width;
+      if (w > 0) this.setState({ scale: w / TPL.W });
+    });
+    if (this.wrapEl) this.ro.observe(this.wrapEl);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => this.forceUpdate());
+  }
+
+  componentWillUnmount() {
+    if (this.ro) this.ro.disconnect();
+    clearTimeout(this.statusTimer);
+    clearTimeout(this.publishTimer);
+    this.detachDrag();
+    if (this.state.photo) URL.revokeObjectURL(this.state.photo);
+  }
+
+  flash(msg) {
+    this.setState({ status: msg });
+    clearTimeout(this.statusTimer);
+    this.statusTimer = setTimeout(() => this.setState({ status: '' }), 6000);
+  }
+
+  displayName() {
+    const n = (this.state.nombre + ' ' + this.state.apellido).trim();
+    return n || 'Nombre Apellido';
+  }
+
+  // Auto-fit real: mide el texto y baja el tamaño hasta que entra en el ancho seguro.
+  fontSizeFor(name) {
+    const ctx = this.measureCtx;
+    const maxW = PILL.w * (1 - NAME.safe * 2);
+    if (!ctx) return NAME.max;
+    let size = NAME.max;
+    while (size > NAME.min) {
+      ctx.font = '800 ' + size + 'px Poppins, sans-serif';
+      if (ctx.measureText(name).width <= maxW) break;
+      size -= 1;
+    }
+    return size;
+  }
+
+  // ÚNICA fuente de verdad del encuadre: zoom + dx/dy en coordenadas de la plantilla.
+  // La usan el preview, las cards del muro y la exportación a Canvas.
+  layout(iw, ih, zoom, dx, dy) {
+    if (!iw || !ih) return { w: FRAME.w, h: FRAME.h, x: FRAME.x, y: FRAME.y, maxDx: 0, maxDy: 0 };
+    const base = Math.max(FRAME.w / iw, FRAME.h / ih);
+    const s = base * (zoom || 1);
+    const w = iw * s;
+    const h = ih * s;
+    const maxDx = Math.max(0, (w - FRAME.w) / 2);
+    const maxDy = Math.max(0, (h - FRAME.h) / 2);
+    const cx = Math.min(maxDx, Math.max(-maxDx, dx || 0));
+    const cy = Math.min(maxDy, Math.max(-maxDy, dy || 0));
+    return { w: w, h: h, x: FRAME.x + (FRAME.w - w) / 2 + cx, y: FRAME.y + (FRAME.h - h) / 2 + cy, maxDx: maxDx, maxDy: maxDy };
+  }
+
+  initialDy(iw, ih) {
+    if (!iw || !ih) return 0;
+    const base = Math.max(FRAME.w / iw, FRAME.h / ih);
+    const h = ih * base;
+    return (h - FRAME.h) * (0.5 - FOCUS_Y);
+  }
+
+  clampOffsets(next) {
+    const s = Object.assign({}, this.state, next);
+    const l = this.layout(s.photoW, s.photoH, s.zoom, s.dx, s.dy);
+    const dx = Math.min(l.maxDx, Math.max(-l.maxDx, s.dx));
+    const dy = Math.min(l.maxDy, Math.max(-l.maxDy, s.dy));
+    return Object.assign({}, next, { dx: dx, dy: dy });
+  }
+
+  setPhotoFile(file) {
+    if (!file || !/^image\//.test(file.type)) return;
+    if (this.state.photo) URL.revokeObjectURL(this.state.photo);
+    const url = URL.createObjectURL(file);
+    this.setState({ photo: url, photoW: 0, photoH: 0, zoom: 1, dx: 0, dy: 0, status: '' });
+    this.loadImage(url).then((img) => {
+      this.setState({
+        photoW: img.naturalWidth,
+        photoH: img.naturalHeight,
+        dy: this.initialDy(img.naturalWidth, img.naturalHeight)
+      });
+    }).catch(() => {});
+  }
+
+  loadImage(src) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = reject;
+      img.src = src;
+    });
+  }
+
+  attachDrag(startX, startY) {
+    this.dragStart = { x: startX, y: startY, dx: this.state.dx, dy: this.state.dy };
+    this.onMove = (ev) => {
+      const k = this.state.scale || 1; // px de pantalla -> px de plantilla
+      const nx = this.dragStart.dx + (ev.clientX - this.dragStart.x) / k;
+      const ny = this.dragStart.dy + (ev.clientY - this.dragStart.y) / k;
+      this.setState(this.clampOffsets({ dx: nx, dy: ny }));
+    };
+    this.onUp = () => { this.setState({ dragging: false }); this.detachDrag(); };
+    window.addEventListener('pointermove', this.onMove);
+    window.addEventListener('pointerup', this.onUp);
+    window.addEventListener('pointercancel', this.onUp);
+  }
+
+  detachDrag() {
+    if (this.onMove) window.removeEventListener('pointermove', this.onMove);
+    if (this.onUp) {
+      window.removeEventListener('pointerup', this.onUp);
+      window.removeEventListener('pointercancel', this.onUp);
+    }
+    this.onMove = null;
+    this.onUp = null;
+  }
+
+  roundRectPath(ctx, x, y, w, h, r) {
+    const rr = Math.min(r, w / 2, h / 2);
+    ctx.beginPath();
+    ctx.moveTo(x + rr, y);
+    ctx.arcTo(x + w, y, x + w, y + h, rr);
+    ctx.arcTo(x + w, y + h, x, y + h, rr);
+    ctx.arcTo(x, y + h, x, y, rr);
+    ctx.arcTo(x, y, x + w, y, rr);
+    ctx.closePath();
+  }
+
+  // Un solo pipeline para dos salidas: el PNG a tamaño completo que descarga la
+  // persona y el JPEG reducido que viaja al muro. Todo el dibujo sigue ocurriendo
+  // en coordenadas de la plantilla; solo cambia la escala del canvas.
+  async buildBlob(opts) {
+    const o = opts || {};
+    const width = o.width || TPL.W * TPL.SCALE;
+    const height = o.height || TPL.H * TPL.SCALE;
+    const s = this.state;
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d');
+    ctx.scale(width / TPL.W, height / TPL.H);
+    ctx.imageSmoothingQuality = 'high';
+
+    // JPEG no tiene canal alfa: sin este relleno, cualquier zona transparente
+    // de la plantilla saldría negra en la card del muro.
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fillRect(0, 0, TPL.W, TPL.H);
+
+    const tpl = await this.loadImage('assets/credencial-template.png');
+    ctx.drawImage(tpl, 0, 0, TPL.W, TPL.H);
+
+    if (s.photo) {
+      const p = await this.loadImage(s.photo);
+      const l = this.layout(p.naturalWidth, p.naturalHeight, s.zoom, s.dx, s.dy);
+      ctx.save();
+      this.roundRectPath(ctx, FRAME.x, FRAME.y, FRAME.w, FRAME.h, FRAME.r);
+      ctx.clip();
+      ctx.drawImage(p, l.x, l.y, l.w, l.h);
+      ctx.restore();
+    }
+
+    if (document.fonts && document.fonts.load) {
+      try { await document.fonts.load('800 64px Poppins'); } catch (e) {}
+    }
+
+    ctx.fillStyle = '#FFFFFF';
+    this.roundRectPath(ctx, PILL.x + PILL.inset, PILL.y + PILL.inset, PILL.w - PILL.inset * 2, PILL.h - PILL.inset * 2, PILL.r - 2);
+    ctx.fill();
+
+    const name = this.displayName();
+    ctx.fillStyle = NAME.color;
+    ctx.font = '800 ' + this.fontSizeFor(name) + 'px Poppins, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(name, PILL.x + PILL.w / 2, PILL.y + PILL.h / 2);
+
+    return new Promise((res) => canvas.toBlob(res, o.mime || 'image/png', o.quality));
+  }
+
+  async download(silent) {
+    if (this.state.busy) return;
+    this.setState({ busy: true });
+    try {
+      const blob = await this.buildBlob();
+      const url = URL.createObjectURL(blob);
+      const slug = this.displayName().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'participante';
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'credencial-skillbot-camp-' + slug + '.png';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 2000);
+      this.setState({ busy: false });
+      if (!silent) this.flash('✓ Credencial descargada. ¡Nos vemos en el camp!');
+    } catch (e) {
+      this.setState({ busy: false });
+      this.flash('No pudimos generar la imagen. Intenta de nuevo.');
+    }
+  }
+
+  // LinkedIn no permite adjuntar una imagen local desde una URL de compartir:
+  // generamos la credencial, copiamos el texto sugerido y abrimos el compositor oficial.
+  async shareLinkedin() {
+    await this.download(true);
+    const text = shareText();
+    let copied = false;
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+        copied = true;
+      }
+    } catch (e) {}
+    window.open(SHARE_URL + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
+    this.flash('Abrimos LinkedIn y descargamos tu credencial.' + (copied ? ' Texto sugerido copiado.' : '') + ' Adjúntala desde el botón de imagen del post.');
+  }
+
+  // El muro vive en el servidor: aquí solo se lee. Si la API no está configurada
+  // responde configured:false y la sección se muestra como no disponible en vez
+  // de fingir un muro vacío.
+  async loadWall() {
+    this.setState({ wallLoading: true, wallError: '' });
+    try {
+      const res = await fetch(API, { headers: { accept: 'application/json' } });
+      const data = await res.json();
+      if (!res.ok || !data || !data.ok) throw new Error('HTTP ' + res.status);
+      this.setState({
+        wall: Array.isArray(data.entries) ? data.entries : [],
+        wallConfigured: data.configured !== false,
+        wallLoading: false,
+        wallError: ''
+      });
+    } catch (e) {
+      this.setState({
+        wallLoading: false,
+        wallError: 'No pudimos cargar el muro de la comunidad.'
+      });
+    }
+  }
+
+  async publish() {
+    const s = this.state;
+    if (s.publishing) return;
+
+    const nombre = s.nombre.trim();
+    const apellido = s.apellido.trim();
+    if (!nombre || !apellido || !s.photo) {
+      this.flash('Completa tu nombre, apellido y fotografía para publicar en el muro.');
+      return;
+    }
+    if (!s.wallConfigured) {
+      this.flash('El muro todavía no está disponible. Descarga tu credencial y compártela mientras tanto.');
+      return;
+    }
+
+    this.setState({ publishing: true, status: '' });
+
+    try {
+      const blob = await this.buildBlob({
+        width: WALL.W, height: WALL.H, mime: 'image/jpeg', quality: 0.86
+      });
+      const image = await blobToDataUrl(blob);
+
+      const res = await fetch(API, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ fullName: nombre + ' ' + apellido, image: image })
+      });
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok || !data || !data.ok) {
+        this.setState({ publishing: false });
+        this.flash((data && data.error) || 'No pudimos publicar tu credencial. Intenta de nuevo.');
+        return;
+      }
+
+      this.setState((prev) => ({
+        wall: [data.entry].concat(prev.wall.filter((e) => e.id !== data.entry.id)),
+        publishing: false,
+        justPublished: true
+      }));
+      this.flash('✓ Tu credencial ya está en el muro de la comunidad.');
+      clearTimeout(this.publishTimer);
+      this.publishTimer = setTimeout(() => this.setState({ justPublished: false }), 5000);
+    } catch (e) {
+      this.setState({ publishing: false });
+      this.flash('No pudimos conectar con el muro. Revisa tu conexión e intenta de nuevo.');
+    }
+  }
+
+  scrollWall(dir) {
+    if (!this.wallEl) return;
+    this.wallEl.scrollBy({ left: dir * (CARD_W + 22) * 2, behavior: 'smooth' });
+  }
+
+  renderVals() {
+    const s = this.state;
+    const name = this.displayName();
+    const l = this.layout(s.photoW, s.photoH, s.zoom, s.dx, s.dy);
+    // Cada entrada ya llega compuesta desde el servidor (plantilla + foto + nombre
+    // quemados en el JPEG), así que la card es una simple <img>: no hay que
+    // recalcular el encuadre de nadie más.
+    const wall = s.wall.map((e) => ({
+      id: e.id,
+      fullName: e.fullName,
+      url: e.url,
+      alt: 'Credencial de ' + e.fullName
+    }));
+    return {
+      nombre: s.nombre,
+      apellido: s.apellido,
+      maxChars: MAX_CHARS,
+      displayName: name,
+      nameFontSize: this.fontSizeFor(name) + 'px',
+      hasPhoto: !!s.photo,
+      noPhoto: !s.photo,
+      photoCss: s.photo ? 'url("' + s.photo + '")' : 'none',
+      photoLeft: (l.x - FRAME.x) + 'px',
+      photoTop: (l.y - FRAME.y) + 'px',
+      photoWidth: l.w + 'px',
+      photoHeight: l.h + 'px',
+      frameCursor: s.dragging ? 'grabbing' : 'grab',
+      zoom: s.zoom,
+      zoomMin: ZOOM.min,
+      zoomMax: ZOOM.max,
+      previewScale: s.scale,
+      previewHeight: Math.round(TPL.H * s.scale) + 'px',
+      downloadLabel: s.busy ? 'Generando…' : 'Descargar credencial',
+      statusMessage: s.status,
+      publishLabel: s.publishing
+        ? 'Publicando…'
+        : (s.justPublished ? '✓ Publicada en el muro' : 'Publicar en el muro'),
+      publishBg: s.justPublished ? '#E8F0FE' : '#FFFFFF',
+      publishBorder: s.justPublished ? '#1A73E8' : '#B3D1F7',
+      dropBorderColor: s.dragOver ? '#1A73E8' : '#B3D1F7',
+      dropBackground: s.dragOver ? '#E8F0FE' : '#F8FAFD',
+      wall: wall,
+      wallLoading: s.wallLoading,
+      wallErrorMessage: s.wallError,
+      hasWallError: !!s.wallError,
+      wallUnavailable: !s.wallLoading && !s.wallError && !s.wallConfigured,
+      wallEmpty: !s.wallLoading && !s.wallError && s.wallConfigured && wall.length === 0,
+      wallHasItems: !s.wallLoading && wall.length > 0,
+      showWallArrows: wall.length > 3,
+      wallCountLabel: s.wallLoading
+        ? 'Cargando el muro…'
+        : (wall.length === 1 ? '1 credencial publicada' : wall.length + ' credenciales publicadas'),
+      cardWidthPx: CARD_W + 'px',
+      cardAspect: CARD_W + ' / ' + Math.round(TPL.H * (CARD_W / TPL.W)),
+      setWrapRef: (el) => {
+        this.wrapEl = el;
+        if (el && this.ro) { this.ro.disconnect(); this.ro.observe(el); }
+      },
+      setWallRef: (el) => { this.wallEl = el; },
+      fileRef: (el) => { this.fileEl = el; },
+      onNombre: (e) => this.setState({ nombre: e.target.value.slice(0, MAX_CHARS) }),
+      onApellido: (e) => this.setState({ apellido: e.target.value.slice(0, MAX_CHARS) }),
+      onPickPhoto: () => { if (this.fileEl) this.fileEl.click(); },
+      onPhotoFile: (e) => this.setPhotoFile(e.target.files && e.target.files[0]),
+      onDragOver: (e) => { e.preventDefault(); if (!s.dragOver) this.setState({ dragOver: true }); },
+      onDragLeave: () => this.setState({ dragOver: false }),
+      onDrop: (e) => {
+        e.preventDefault();
+        this.setState({ dragOver: false });
+        const f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+        this.setPhotoFile(f);
+      },
+      onFramePointerDown: (e) => {
+        if (!s.photo) return;
+        e.preventDefault();
+        this.setState({ dragging: true });
+        this.attachDrag(e.clientX, e.clientY);
+      },
+      onFrameWheel: (e) => {
+        if (!s.photo) return;
+        e.preventDefault();
+        const z = Math.min(ZOOM.max, Math.max(ZOOM.min, s.zoom - e.deltaY * 0.0015));
+        this.setState(this.clampOffsets({ zoom: z }));
+      },
+      onZoom: (e) => {
+        const z = Math.min(ZOOM.max, Math.max(ZOOM.min, parseFloat(e.target.value) || 1));
+        this.setState(this.clampOffsets({ zoom: z }));
+      },
+      onResetFraming: () => this.setState({ zoom: 1, dx: 0, dy: this.initialDy(s.photoW, s.photoH) }),
+      onPublish: () => this.publish(),
+      onShareLinkedin: () => this.shareLinkedin(),
+      onRetryWall: () => this.loadWall(),
+      onWallPrev: () => this.scrollWall(-1),
+      onWallNext: () => this.scrollWall(1),
+      onSubmit: (e) => { e.preventDefault(); this.download(false); }
+    };
+  }
+}
+
+</script>
+</body>
+</html>
